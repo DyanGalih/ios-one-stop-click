@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (4.8.2)
+  - SharkORM (2.3.62)
+
+DEPENDENCIES:
+  - Alamofire
+  - SharkORM
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - SharkORM
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  SharkORM: ff65244dfc2e1fa4613badad7c42f6febc1951cc
+
+PODFILE CHECKSUM: d4a63ca280a6f21d941683abd19869d6b59e570b
+
+COCOAPODS: 1.6.1
