@@ -46,20 +46,14 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore
         if(error){
             presenter?.presentFailedLogin(title: "Login Failed", message: message)
         }else{
-            
-            let parameters = [
-                "username": request.email,
-                "password": request.password
-            ]
-            
-            Alamofire.request(Config().endpoint + "auth/token", method: .post, parameters: parameters, encoding: URLEncoding.default).responseJSON{ response in
-                do{
-                    let loginStruct = try JSONDecoder().decode(Login.User.LoginResponse.self, from: response.data!)
+            worker = LoginWorker()
+            worker?.doLogin(request: request, completion: { (data, err) in
+                if data != nil{
                     self.presenter?.presentSuccessLogin()
-                }catch _{
+                }else{
                     self.presenter?.presentFailedLogin(title: "Login Failed", message: "Please check your email or password")
                 }
-            }
+            })
         }
     }
 }

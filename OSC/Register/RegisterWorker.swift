@@ -11,10 +11,26 @@
 //
 
 import UIKit
+import Alamofire
 
 class RegisterWorker
 {
-  func doSomeWork()
-  {
-  }
+    func doRegister(request: Register.NewUser.Request, completion:@escaping (Register.NewUser.Response?, Error?)-> Void)
+    {
+        let parameters = [
+            "name": request.name,
+            "email": request.email,
+            "password": request.password,
+            "password_confirmation": request.password_confirmation
+        ]
+        
+        Alamofire.request(Config().endpoint + "auth/register", method: .post, parameters: parameters as Parameters, encoding:URLEncoding.default).responseJSON{ response in
+            do{
+                let registerStruct = try JSONDecoder().decode(Register.NewUser.Response.self, from: response.data!)
+                completion(registerStruct, nil)
+            }catch let err{
+                completion(nil, err)
+            }
+        }
+    }
 }
