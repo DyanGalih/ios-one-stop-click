@@ -24,7 +24,7 @@ class RegisterWorker
             "password_confirmation": request.password_confirmation
         ]
         
-        Alamofire.request(Config().endpoint + "auth/register", method: .post, parameters: parameters as Parameters, encoding:URLEncoding.default).responseJSON{ response in
+        Alamofire.request(Config().endpoint + "auth/register", method: .post, parameters: parameters as Parameters, encoding:URLEncoding.default).debugLog().responseJSON{ response in
             do{
                 let registerStruct = try JSONDecoder().decode(Register.NewUser.Response.self, from: response.data!)
                 completion(registerStruct, nil)

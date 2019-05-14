@@ -80,10 +80,15 @@ class LoginViewController: UIViewController, LoginDisplayLogic
     
     func showSuccessLogin() {
         let alert = UIAlertController(title: "Login Success", message: "Welcome Back", preferredStyle: .alert);
-        
-        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil);
+
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: routeToHome(_:));
         alert.addAction(okAction);
         present(alert, animated: true, completion: nil)
+        
+    }
+    
+    func routeToHome(_: UIAlertAction) -> Void {
+        router?.routeToHome(segue: nil)
     }
     
     func showLoginAlert(tilte: String, message: String) -> Void {
@@ -104,5 +109,9 @@ class LoginViewController: UIViewController, LoginDisplayLogic
     
     @IBAction func btnRegister(_ sender: UIButton) {
         router?.routeToRegister(segue: nil)
+    }
+    
+    @IBAction func btnForgotPassword(_ sender: UIButton) {
+        router?.routeToForgotPassword(segue: nil)
     }
 }

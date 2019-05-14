@@ -9,5 +9,4 @@ use_frameworks!
 target 'OSC' do
   # 5
   pod 'Alamofire'
-  pod "SharkORM"
 end

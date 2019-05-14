@@ -12,6 +12,7 @@
 
 import UIKit
 import Alamofire
+import CoreData
 
 class LoginWorker
 {
@@ -22,13 +23,47 @@ class LoginWorker
             "password": request.password
         ]
         
-        Alamofire.request(Config().endpoint + "auth/token", method: .post, parameters: parameters, encoding: URLEncoding.default).responseJSON{ response in
+        Alamofire.request(Config().endpoint + "auth/token", method: .post, parameters: parameters, encoding: URLEncoding.default).debugLog().responseJSON{ response in
             do{
+                print(response.data!)
                 let loginStruct = try JSONDecoder().decode(Login.User.LoginResponse.self, from: response.data!)
                 completion(loginStruct, nil);
             }catch let err{
+                print(err)
                 completion(nil, err)
             }
+        }
+    }
+    
+    func doStoreAuth(response: Login.User.LoginResponse, completion: @escaping(Bool?) -> Void){
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Auth")
+        //request.predicate = NSPredicate(format: "age = %@", "12")
+        request.returnsObjectsAsFaults = false
+        
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject] {
+                context.delete(data)
+            }
+        } catch {
+            print("Failed")
+        }
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Auth", in: context)
+        let auth = NSManagedObject(entity: entity!, insertInto: context)
+       
+        auth.setValue(response.token_type, forKey: "token_type")
+        auth.setValue(response.expires_in, forKey: "expires_in")
+        auth.setValue(response.access_token, forKey: "access_token")
+        auth.setValue(response.refresh_token, forKey: "refresh_token")
+        
+        do {
+            try context.save()
+            completion(true)
+        } catch {
+            completion(false)
         }
     }
 }

@@ -14,16 +14,29 @@ import UIKit
 
 @objc protocol LoginRoutingLogic
 {
-  func routeToRegister(segue: UIStoryboardSegue?)
+    func routeToRegister(segue: UIStoryboardSegue?)
+    func routeToHome(segue: UIStoryboardSegue?)
+    func routeToForgotPassword(segue: UIStoryboardSegue?)
 }
 
 protocol LoginDataPassing
 {
-  var dataStore: LoginDataStore? { get }
+    var dataStore: LoginDataStore? { get }
 }
 
 class LoginRouter: NSObject, LoginRoutingLogic, LoginDataPassing
 {
+    func routeToForgotPassword(segue: UIStoryboardSegue?) {
+        if let segue = segue{
+            let _ = segue.destination as! ForgotPasswordViewController
+        }else{
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let destinationVC = storyboard.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as! ForgotPasswordViewController
+            
+            navigateToForgotPassword(source: viewController!, destination: destinationVC)
+        }
+    }
+    
     func routeToRegister(segue: UIStoryboardSegue?) {
         if let segue = segue{
             let destinationVC = segue.destination as! RegisterViewController
@@ -33,26 +46,44 @@ class LoginRouter: NSObject, LoginRoutingLogic, LoginDataPassing
             let destinationVC = storyboard.instantiateViewController(withIdentifier: "RegistrationViewController") as! RegisterViewController
             
             var destinationDS = destinationVC.router!.dataStore!
-                passDataToRegister(source: dataStore!, destination: &destinationDS)
-                navigateToRegister(source: viewController!, destination: destinationVC)
+            passDataToRegister(source: dataStore!, destination: &destinationDS)
+            navigateToRegister(source: viewController!, destination: destinationVC)
         }
     }
     
-  weak var viewController: LoginViewController?
-  var dataStore: LoginDataStore?
-  
-
-  // MARK: Navigation
-  
-  func navigateToRegister(source: LoginViewController, destination: RegisterViewController)
-  {
-    source.show(destination, sender: nil)
-  }
-  
-  // MARK: Passing data
-  
-  func passDataToRegister(source: LoginDataStore, destination: inout RegisterDataStore)
-  {
-    destination.name = source.name
-  }
+    func routeToHome(segue: UIStoryboardSegue?){
+        if let segue = segue{
+            _ = segue.destination as! HomeViewController
+        }else{
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let destinationVC = storyboard.instantiateViewController(withIdentifier: "HomeTabBarController") as! UITabBarController
+            navigateToHome(source: viewController!, destination: destinationVC)
+            
+        }
+    }
+    
+    weak var viewController: LoginViewController?
+    var dataStore: LoginDataStore?
+    
+    // MARK: Navigation
+    func navigateToHome(source: LoginViewController, destination: UITabBarController) {
+        source.present(destination, animated: true, completion: nil)
+    }
+    
+    func navigateToForgotPassword(source: LoginViewController, destination: ForgotPasswordViewController)
+    {
+        source.show(destination, sender: nil)
+    }
+    
+    func navigateToRegister(source: LoginViewController, destination: RegisterViewController)
+    {
+        source.show(destination, sender: nil)
+    }
+    
+    // MARK: Passing data
+    
+    func passDataToRegister(source: LoginDataStore, destination: inout RegisterDataStore)
+    {
+        destination.name = source.name
+    }
 }

@@ -14,47 +14,44 @@ import UIKit
 
 @objc protocol RegisterRoutingLogic
 {
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToLogin(segue: UIStoryboardSegue?)
 }
 
 protocol RegisterDataPassing
 {
-  var dataStore: RegisterDataStore? { get }
+    var dataStore: RegisterDataStore? { get }
 }
 
 class RegisterRouter: NSObject, RegisterRoutingLogic, RegisterDataPassing
 {
-  weak var viewController: RegisterViewController?
-  var dataStore: RegisterDataStore?
-  
-  // MARK: Routing
-  
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
-
-  // MARK: Navigation
-  
-  //func navigateToSomewhere(source: RegisterViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
-  
-  // MARK: Passing data
-  
-  //func passDataToSomewhere(source: RegisterDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
+    weak var viewController: RegisterViewController?
+    var dataStore: RegisterDataStore?
+    
+    // MARK: Routing
+    
+    func routeToLogin(segue: UIStoryboardSegue?)
+    {
+        if let segue = segue {
+            _ = segue.destination as! LoginViewController
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let destinationVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            navigateToLogin(source: viewController!, destination: destinationVC)
+        }
+    }
+    
+    // MARK: Navigation
+    
+    func navigateToLogin(source: RegisterViewController, destination: LoginViewController)
+    {
+        source.show(destination, sender: nil)
+        source.dismiss(animated: false, completion: nil)
+    }
+    
+    // MARK: Passing data
+    
+    //func passDataToSomewhere(source: RegisterDataStore, destination: inout SomewhereDataStore)
+    //{
+    //  destination.name = source.name
+    //}
 }

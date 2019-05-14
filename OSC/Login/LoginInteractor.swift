@@ -49,7 +49,14 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore
             worker = LoginWorker()
             worker?.doLogin(request: request, completion: { (data, err) in
                 if data != nil{
-                    self.presenter?.presentSuccessLogin()
+                    self.worker?.doStoreAuth(response: data!, completion:{(bool) in
+                        if(bool!){
+                            self.presenter?.presentSuccessLogin()
+                        }else{
+                            self.presenter?.presentFailedLogin(title: "Login Failed", message: "Contact your administrator")
+                        }
+                    })
+                    
                 }else{
                     self.presenter?.presentFailedLogin(title: "Login Failed", message: "Please check your email or password")
                 }
