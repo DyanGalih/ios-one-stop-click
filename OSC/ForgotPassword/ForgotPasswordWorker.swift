@@ -21,12 +21,16 @@ class ForgotPasswordWorker
             "email": request.email
         ]
         
-        Alamofire.request(Config().endpoint + "api/forgot_password", method: .post, parameters: parameters, encoding: URLEncoding.default).debugLog()
+        Alamofire.request(Config().endpoint + "/forgot_password", method: .post, parameters: parameters, encoding: JSONEncoding.default).debugLog()
             .responseJSON{
                 response in
                 do {
                     let forgotPasswordStruct = try JSONDecoder().decode(ForgotPassword.Forgot.Response.self, from: response.data!)
-                    completion(forgotPasswordStruct, nil)
+                    if forgotPasswordStruct.code == 200{
+                        completion(forgotPasswordStruct, nil)
+                    }else{
+                        completion(nil, nil)
+                    }
                 }catch let err{
                     completion(nil, err)
                 }

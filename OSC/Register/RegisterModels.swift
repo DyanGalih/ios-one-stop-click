@@ -20,21 +20,24 @@ enum Register
     {
         struct Request
         {
-            var name: String
+            var firstname: String
             var email: String
+            var lastname: String
             var password: String
             var password_confirmation: String
-            init(name: String, email: String, password: String, password_confirmation: String) {
-                self.name = name
+            init(firstname: String, lastname: String, email: String, password: String, password_confirmation: String) {
+                self.firstname = firstname
+                self.lastname = lastname
                 self.email = email
                 self.password = password
                 self.password_confirmation = password_confirmation
             }
         }
         struct Response:Decodable
+            
         {
             var code: Int32
-            var error: Bool
+            var data: [String]
             var message: String
         }
         struct ViewModel

@@ -20,8 +20,8 @@ protocol RegisterDisplayLogic: class
 
 class RegisterViewController: UIViewController, RegisterDisplayLogic
 {
-    
-    @IBOutlet weak var nameTxt: UITextField!
+    @IBOutlet weak var firstNameTxt: UITextField!
+    @IBOutlet weak var lastNameTxt: UITextField!
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var pinTxt: UITextField!
     @IBOutlet weak var pinConfirmationTxt: UITextField!
@@ -83,12 +83,13 @@ class RegisterViewController: UIViewController, RegisterDisplayLogic
     //@IBOutlet weak var nameTextField: UITextField!
     
     @IBAction func btnSubmit(_ sender: UIButton) {
-        let name = nameTxt.text!
+        let firstName = firstNameTxt.text!
+        let lastName = lastNameTxt.text!
         let email = emailTxt.text!
         let pin = pinTxt.text!
         let pinConfirmation = pinConfirmationTxt.text!
         
-        let request = Register.NewUser.Request(name: name, email: email, password: pin, password_confirmation: pinConfirmation)
+        let request = Register.NewUser.Request(firstname: firstName, lastname: lastName, email: email, password: pin, password_confirmation: pinConfirmation)
         interactor?.doRegister(request: request)
     }
     
@@ -101,7 +102,8 @@ class RegisterViewController: UIViewController, RegisterDisplayLogic
     }
     
     func displaySuccessRegister() {
-        nameTxt.text = ""
+        firstNameTxt.text = ""
+        lastNameTxt.text = ""
         emailTxt.text = ""
         pinTxt.text = ""
         pinConfirmationTxt.text = ""

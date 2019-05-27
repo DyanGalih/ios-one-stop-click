@@ -19,17 +19,19 @@ class LoginWorker
     func doLogin(request: Login.User.Request, completion:@escaping (Login.User.LoginResponse?, Error?) -> Void)
     {
         let parameters = [
-            "username": request.email,
+            "email": request.email,
             "password": request.password
         ]
         
-        Alamofire.request(Config().endpoint + "auth/token", method: .post, parameters: parameters, encoding: URLEncoding.default).debugLog().responseJSON{ response in
+        Alamofire.request(Config().endpoint + "/auth", method: .post, parameters: parameters, encoding: JSONEncoding.default).debugLog().responseJSON{ response in
             do{
-                print(response.data!)
                 let loginStruct = try JSONDecoder().decode(Login.User.LoginResponse.self, from: response.data!)
-                completion(loginStruct, nil);
+                if(loginStruct.code == 200){
+                    completion(loginStruct, nil);
+                }else{
+                    completion(nil, nil)
+                }
             }catch let err{
-                print(err)
                 completion(nil, err)
             }
         }
@@ -54,10 +56,10 @@ class LoginWorker
         let entity = NSEntityDescription.entity(forEntityName: "Auth", in: context)
         let auth = NSManagedObject(entity: entity!, insertInto: context)
        
-        auth.setValue(response.token_type, forKey: "token_type")
-        auth.setValue(response.expires_in, forKey: "expires_in")
-        auth.setValue(response.access_token, forKey: "access_token")
-        auth.setValue(response.refresh_token, forKey: "refresh_token")
+        auth.setValue(response.data.user.email, forKey: "email")
+        auth.setValue(response.data.user.firstname, forKey: "first_name")
+        auth.setValue(response.data.user.lastname, forKey: "last_name")
+        auth.setValue(response.data.token, forKey: "token")
         
         do {
             try context.save()

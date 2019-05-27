@@ -9,5 +9,5 @@
 import Foundation
 
 class Config{
-    let endpoint = "http://172.19.13.156/api/";
+    let endpoint = "https://goosc.herokuapp.com";
 }

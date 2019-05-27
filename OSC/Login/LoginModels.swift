@@ -32,11 +32,35 @@ enum Login
         }
         
         struct LoginResponse: Decodable{
-            var token_type: String
-            var expires_in: Int32
-            var access_token: String
-            var refresh_token: String
+            var code: Int32
+            var message: String
+            
+            struct Data:Decodable{
+                struct User: Decodable {
+                    var id: Int32
+                    var email: String
+                    var password: String
+                    var firstname: String
+                    var lastname: String
+                    struct CreatedAt: Decodable{
+                        var Time: String
+                        var Valid: Bool
+                    }
+                    var created_at:CreatedAt
+                    
+                    struct UpdatedAt:Decodable {
+                        var Time: String
+                        var Valid: Bool
+                    }
+                    var updated_at: UpdatedAt
+                }
+                var user: User
+                var token: String
+            }
+            var data: Data
         }
+        
+        
         
         struct ViewModel
         {

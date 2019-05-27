@@ -56,24 +56,28 @@ class RegisterInteractor: RegisterBusinessLogic, RegisterDataStore
     {
         var errorMessage = ""
         var error = false
-        if request.name.isEmpty{
+        if request.firstname.isEmpty{
             errorMessage = "Name can't be empty"
             error = true
         } else
             
-            if request.email.isEmpty{
-                errorMessage = "Email can't be empty"
-                error = true
-            } else
+            if request.lastname.isEmpty{
                 
-                if request.password.isEmpty{
-                    errorMessage = "Pin can't be empty"
+            }else
+                
+                if request.email.isEmpty{
+                    errorMessage = "Email can't be empty"
                     error = true
                 } else
                     
-                    if request.password_confirmation.isEmpty{
-                        errorMessage = "Pin confirmation can't be empty"
+                    if request.password.isEmpty{
+                        errorMessage = "Pin can't be empty"
                         error = true
+                    } else
+                        
+                        if request.password_confirmation.isEmpty{
+                            errorMessage = "Pin confirmation can't be empty"
+                            error = true
         }
         if(error){
             self.presenter?.presentRegisterFailed(title: "Register Failed", message: errorMessage)

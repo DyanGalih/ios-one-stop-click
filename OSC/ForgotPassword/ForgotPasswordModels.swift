@@ -28,7 +28,7 @@ enum ForgotPassword
         struct Response: Decodable
         {
             var code: Int32
-            var error: Bool
+            var data: [String]
             var message: String
         }
         struct ViewModel
