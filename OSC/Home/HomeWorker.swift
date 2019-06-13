@@ -11,10 +11,20 @@
 //
 
 import UIKit
+import Alamofire
 
 class HomeWorker
 {
-  func doSomeWork()
-  {
-  }
+    func doGetHomeData(completion:@escaping (Home.Data.Response?, Error?) -> Void)
+    {
+        Alamofire.request(Config().endpoint + "/homepage", method: .get).debugLog().responseJSON{
+            response in
+            do{
+                let homeStruct = try JSONDecoder().decode(Home.Data.Response.self, from: response.data!)
+                completion(homeStruct, nil)
+            }catch let err{
+                completion(nil, err)
+            }
+        }
+    }
 }

@@ -41,6 +41,12 @@
 		5EB96C55228129F600786655 /* RegisterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB96C4F228129F600786655 /* RegisterModels.swift */; };
 		5EB96C56228129F600786655 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB96C50228129F600786655 /* RegisterViewController.swift */; };
 		5EB96C57228129F600786655 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB96C51228129F600786655 /* RegisterInteractor.swift */; };
+		632CD3BC229BBDFD00E9D352 /* CategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632CD3B6229BBDFD00E9D352 /* CategoryPresenter.swift */; };
+		632CD3BD229BBDFD00E9D352 /* CategoryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632CD3B7229BBDFD00E9D352 /* CategoryWorker.swift */; };
+		632CD3BE229BBDFD00E9D352 /* CategoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632CD3B8229BBDFD00E9D352 /* CategoryRouter.swift */; };
+		632CD3BF229BBDFD00E9D352 /* CategoryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632CD3B9229BBDFD00E9D352 /* CategoryModels.swift */; };
+		632CD3C0229BBDFD00E9D352 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632CD3BA229BBDFD00E9D352 /* CategoryViewController.swift */; };
+		632CD3C1229BBDFD00E9D352 /* CategoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632CD3BB229BBDFD00E9D352 /* CategoryInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +108,12 @@
 		5EB96C4F228129F600786655 /* RegisterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModels.swift; sourceTree = "<group>"; };
 		5EB96C50228129F600786655 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5EB96C51228129F600786655 /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
+		632CD3B6229BBDFD00E9D352 /* CategoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPresenter.swift; sourceTree = "<group>"; };
+		632CD3B7229BBDFD00E9D352 /* CategoryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryWorker.swift; sourceTree = "<group>"; };
+		632CD3B8229BBDFD00E9D352 /* CategoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRouter.swift; sourceTree = "<group>"; };
+		632CD3B9229BBDFD00E9D352 /* CategoryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModels.swift; sourceTree = "<group>"; };
+		632CD3BA229BBDFD00E9D352 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		632CD3BB229BBDFD00E9D352 /* CategoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryInteractor.swift; sourceTree = "<group>"; };
 		6A5E7AD31306950BADFD1882 /* Pods_OSC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OSC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -198,6 +210,7 @@
 		5EABF90022700065007FE532 /* OSC */ = {
 			isa = PBXGroup;
 			children = (
+				632CD3B5229BBB4200E9D352 /* Category */,
 				5E1ECD84228A628800327B2F /* ForgotPassword */,
 				5E7CFAB022893F4D000A2C53 /* CoreData */,
 				5E7CFAA1228920AE000A2C53 /* Tab */,
@@ -256,6 +269,19 @@
 				5EB96C51228129F600786655 /* RegisterInteractor.swift */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		632CD3B5229BBB4200E9D352 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				632CD3B6229BBDFD00E9D352 /* CategoryPresenter.swift */,
+				632CD3B7229BBDFD00E9D352 /* CategoryWorker.swift */,
+				632CD3B8229BBDFD00E9D352 /* CategoryRouter.swift */,
+				632CD3B9229BBDFD00E9D352 /* CategoryModels.swift */,
+				632CD3BA229BBDFD00E9D352 /* CategoryViewController.swift */,
+				632CD3BB229BBDFD00E9D352 /* CategoryInteractor.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		7E89ADF0F6BB0A86920BB667 /* Frameworks */ = {
@@ -471,19 +497,25 @@
 				5EB96C46228129DC00786655 /* LoginWorker.swift in Sources */,
 				5E7CFA9D22891295000A2C53 /* HomeRouter.swift in Sources */,
 				5EB96C48228129DC00786655 /* LoginModels.swift in Sources */,
+				632CD3BE229BBDFD00E9D352 /* CategoryRouter.swift in Sources */,
 				5E7CFAAF2289260D000A2C53 /* TabViewController.swift in Sources */,
+				632CD3BC229BBDFD00E9D352 /* CategoryPresenter.swift in Sources */,
+				632CD3BF229BBDFD00E9D352 /* CategoryModels.swift in Sources */,
 				5E7CFA9E22891295000A2C53 /* HomeModels.swift in Sources */,
 				5E324207227A8B5900DDBA2F /* Config.swift in Sources */,
 				5E7CFAB622893FB8000A2C53 /* osc.xcdatamodeld in Sources */,
 				5E1ECD8D228A62A300327B2F /* ForgotPasswordRouter.swift in Sources */,
 				5EABF90222700065007FE532 /* AppDelegate.swift in Sources */,
+				632CD3BD229BBDFD00E9D352 /* CategoryWorker.swift in Sources */,
 				5EB96C52228129F600786655 /* RegisterPresenter.swift in Sources */,
 				5E1ECD8C228A62A300327B2F /* ForgotPasswordWorker.swift in Sources */,
 				5EB96C49228129DC00786655 /* LoginViewController.swift in Sources */,
 				5E1ECD8F228A62A300327B2F /* ForgotPasswordViewController.swift in Sources */,
 				5E1ECD90228A62A300327B2F /* ForgotPasswordInteractor.swift in Sources */,
 				5EB96C47228129DC00786655 /* LoginRouter.swift in Sources */,
+				632CD3C1229BBDFD00E9D352 /* CategoryInteractor.swift in Sources */,
 				5E7CFA9C22891295000A2C53 /* HomeWorker.swift in Sources */,
+				632CD3C0229BBDFD00E9D352 /* CategoryViewController.swift in Sources */,
 				5EB96C57228129F600786655 /* RegisterInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

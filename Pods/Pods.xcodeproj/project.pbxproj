@@ -1,0 +1,1217 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00788F709E3DB5848090DBC621F63887 /* SRKSyncObject+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 21D7E07AE0BD80E26487041B89D7D8F7 /* SRKSyncObject+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		00DC3D3DC607A8F65DF67A8F2C9FC8DD /* SharkSyncChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D110849520F6D8119E4C0CBBFE8145 /* SharkSyncChange.m */; };
+		050473E4CCF27072C1CFB67E332FD9B7 /* SRKRegistryEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 98C19DBBDF439465B2D2F62E08FCBEB3 /* SRKRegistryEntry.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		059D92B7BBFBEC53E9A3B6E11C5C3B3A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28248E265A2C8B84E8708F1BF8302261 /* Response.swift */; };
+		06DE9EB89CE338CC6C49F2F48DEA323B /* SRKUnsupportedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E987797093B8ECD652E896EF3E7068 /* SRKUnsupportedObject.m */; };
+		07605BC43650A1712B43702E1959B236 /* SRKEntity+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB783B052E4AC36EFF8F6A5BC0485B3 /* SRKEntity+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		09A498AFB03D32ECF95C4AC3EFB61CD1 /* SharkSchemaManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CB878CC4CD8F147E0CCFF925A866754 /* SharkSchemaManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0A39AF55285A3A4F7CBABB6D822FA4A3 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154417504BD62BD3FB6D667DB5DD3EC5 /* Alamofire.swift */; };
+		119C177F5AEDEB89A7D8261F2378AF8D /* SRKSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = A55A4F66C52D55EC6ADB697335E85AB2 /* SRKSettings.m */; };
+		17108D6DA267E46BE4CE84274FEA90D0 /* SRKGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C186D0E35CA731ED43337853DB38A5F /* SRKGlobals.m */; };
+		1A31035A7062BAA7C2C213A79B3DC6FB /* SRKQueryAsyncHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5BCDF1D6E0266481D10F962CA62685 /* SRKQueryAsyncHandler.m */; };
+		1D29D2ACADF961F69D32B06FA6A09E28 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960915253B9446DBF29090CACB02C5A0 /* Notifications.swift */; };
+		1D5A3082634FEF496A6BB3DD2F91773A /* sqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = AA11279358DAED4E3F32A7A1B854BE3E /* sqlite3.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1EA7AE3A5AC2A6E6372BC043989E7A7A /* Pods-OSC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 330657659CFE8889C7BB581357E60228 /* Pods-OSC-dummy.m */; };
+		23DAEE0C2AA9C1307EC88F6C030BF852 /* SharkSyncGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC3EAF63609F060431A29F4BBD9448C /* SharkSyncGroup.m */; };
+		281EC5FEE385F3D11D5047EC33B0DD65 /* SRKLazyLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 88BA0A6DDF266A4DDB0194201EFB1247 /* SRKLazyLoader.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		28571F80513663BB35356655400D10CB /* SRKEntityChain.h in Headers */ = {isa = PBXBuildFile; fileRef = BEFCB3EC68F128D572AF5390E3FA8FDC /* SRKEntityChain.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2A50052A779F6BC01F7CB01943A4F3B0 /* SRKEventBlockHolder.h in Headers */ = {isa = PBXBuildFile; fileRef = 798003A054649D7C113A3563790E2080 /* SRKEventBlockHolder.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2E777014AA8F729A57D5B55DB133075D /* SharkSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CB3B48099C4222130F3E9F40545D36 /* SharkSync.m */; };
+		2F9E88933194FB1815EB636E35021EFF /* SRKRelationship.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DEF80AD63F35ED5F202F5B1286AFD9D /* SRKRelationship.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		30F5BF17F1F377C9EBB6897AC4D358A3 /* SRKContext.m in Sources */ = {isa = PBXBuildFile; fileRef = CB255B7CA941DD64575878CBD1E204C6 /* SRKContext.m */; };
+		323D24A71EA0FF7C16F89EFE2CA1F1D7 /* SRKDefinitions.h in Headers */ = {isa = PBXBuildFile; fileRef = CE5A6D088E504C3D7693129F6836E99E /* SRKDefinitions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		353E9778958D0A291CAFB5640DD2C275 /* SRKEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 327BAD7BE5E32C1B35591F77CC5E2799 /* SRKEntity.m */; };
+		355C18EEC82624A06A6CC93965258E33 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82D23E93F8572274086303A60E6221 /* Request.swift */; };
+		3929E836ADA2D059B4AE6A894223ED60 /* SharkSyncGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 33C150151F336F43BE83E08A8E1E0F04 /* SharkSyncGroup.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		39EE23850F9596B1CB593082D5F012A3 /* SRKQueryAsyncHandler+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 92680D334DDBCD5518992592CFE413B1 /* SRKQueryAsyncHandler+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3B29FEAA3414DBC2D39809F4AF78DF52 /* SRKJoinObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3E238E2B7C41A57870CEBC65E0AE78 /* SRKJoinObject.m */; };
+		3BD1DAFE1F3E6C9E4EB0F2099B6D6FA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		3C04C77A57A2D831FA3E48CE28FB596E /* SRKEventBlockHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC775B1F7840E8480A13E74163D3380 /* SRKEventBlockHolder.m */; };
+		3E0749AF6C51BCF0E4A41CF1D6A76FED /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DD776DB5DA364AD109E0D2D686DE0 /* DispatchQueue+Alamofire.swift */; };
+		4110B1EF483222208F76A237EA861B28 /* SRKEntityChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADBABD45492BB034E851FAB465B0958 /* SRKEntityChain.m */; };
+		415791F1940A1541403ACCA0940BC441 /* SRKJoinObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 17F0D12F8C79C87243607A45277A6FCC /* SRKJoinObject.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		41983214409C4B3D9D01970B78D60415 /* SyncRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B551FBE52C621AA3F6EBE3811106891 /* SyncRequest.m */; };
+		438ADED4C8A3DB10BA9D14C44FF1608A /* SRKSyncRegisteredClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 89531B07179A2B62874B3C9BD572D5EB /* SRKSyncRegisteredClass.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		47829804455B75316092F18EDAA37573 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 660C175E1D0B4A7BC8169E0626C3B1AF /* sqlite3.c */; };
+		4A34F71E220F41523577F1F62E94E0FA /* SRKCommitOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = B83B43139C62651C8B21B098FFF812ED /* SRKCommitOptions.m */; };
+		4CC637ECCBD91B834D9D8A320CEA1A9E /* SharkORM.m in Sources */ = {isa = PBXBuildFile; fileRef = A877BA9AED699EDC040FB40724246330 /* SharkORM.m */; };
+		4CCD4550B83D95648F672EBA9714D924 /* SRKEncryptedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 54FDD023892189C35F47AB7E1464C46C /* SRKEncryptedObject.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		54CFF8E0B515235A29F48855791A55DA /* SRKSQLiteHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = B800314598500A362B59E4BC618F2231 /* SRKSQLiteHandle.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		603EEFA9137F024C1A3E82E1490784A8 /* SRKSyncOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = AD519D731CE495D38CA1D759D94C80F2 /* SRKSyncOptions.m */; };
+		605FA26B520CFBD16F7F79BDB0B87DDB /* SRKDefunctObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A32A21A706D1B55871BDB2F28D946039 /* SRKDefunctObject.m */; };
+		60B6C2A003864AAD3A426448152F67BE /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A5B5E8872E13BE6CAEC3DC1085438C /* Timeline.swift */; };
+		641FB944457B7F82B179071A1AD66F1D /* SRKTransactionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1360AB9C1A61798627CF0EB7731D38 /* SRKTransactionInfo.m */; };
+		67157C0FC070A89042658EDD1628CEA0 /* SyncComms.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC92303342B3D86AAEE35BBF4F13B54 /* SyncComms.m */; };
+		68FFE93D42F4E966B21D9A8080016540 /* SRKTransactionInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 1118A569B485FF0A05B1F4C09FD8C103 /* SRKTransactionInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6A2CA76A1EDAADA45C3D8C62EFCE3BD5 /* SRKQuery+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 169DFA919A929164CFB8A79293E6530A /* SRKQuery+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6C3A6E0A0E4AD30CE952F817A4574C08 /* SRKRegistryEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D3278F73C7F19B7A6035A43A37BA95 /* SRKRegistryEntry.m */; };
+		6EFD003458AE7F689DEA720A2030C261 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030A76B85D650A139542B57377CA08FF /* ResponseSerialization.swift */; };
+		6FF755779AC9EBB70FB98EB092058E59 /* SRKDeferredChange.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7F97A391CE4AFF542C7FE50D3E62D0 /* SRKDeferredChange.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		700D3D95AF9520CB227846DFD943A2DA /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07972A3633F6D70F33A2F0185FDB32 /* ParameterEncoding.swift */; };
+		71DB6314F891BE55E84ABE6204B57D86 /* SRKSyncRegisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D920295052D9E6289D499204798761 /* SRKSyncRegisteredClass.m */; };
+		7243C8FE9D8F724ECE751E9A73E463A9 /* SRKRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = 79345568781748E472DDBFF99D81E5D2 /* SRKRegistry.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		73AB05789A4982944AF68DBD013E3EB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E94D481CEB7641D79448A61F688662D /* NetworkReachabilityManager.swift */; };
+		74C09DCA740548075BC3A830D7DCADAC /* SRKRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0045EA84FACA1A3029ED9A6CB2444A /* SRKRegistry.m */; };
+		75234DA030F11A657F57F74B73D98434 /* SRKRelationship.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E43C1B7C06A9A2FB57505FE9AED709 /* SRKRelationship.m */; };
+		772911DA6E33D1CBBC30131B7C8BDBB3 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C4353592478EE55BF22C11C787DBA907 /* Alamofire-dummy.m */; };
+		77E8F0EB9FFBE2E3EB0C77095C644606 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553C07BD17E527EF47F1BED8F25A529B /* TaskDelegate.swift */; };
+		787F80AE83E0C899F41E3AF8C3915123 /* SRKEventHandler+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B43FDCAE072E351853232008B0B4EED9 /* SRKEventHandler+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7DD87D064A3ECF549E28DB66A1AE18FD /* SharkORM.h in Headers */ = {isa = PBXBuildFile; fileRef = 5335422490BD2B1E6562DE3033E48E5A /* SharkORM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E3538A6992A38276764936A9733493D /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099DD1A96793BAD68ECECDCF668B1565 /* AFError.swift */; };
+		841F8A6F3406CBEAB6508EA93BA599CA /* SRKCompoundIndex+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 928A211F2124CAE1066DC85DDB19EA4A /* SRKCompoundIndex+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		85E723D4C54FB9F327AA2033DC1A0136 /* SRKResultSet+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C3003E883C9668C3E5AD23AFA84B1B0 /* SRKResultSet+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8D2A6A90A6DDAF75EA52D471258545CC /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C14C93A8747F25DBC054D3A9CE60C /* ServerTrustPolicy.swift */; };
+		90CD3F557A7722BAA43E0AEBF7BEEF1C /* SRKSyncNodesList.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABA4185DE758071BA26D98E04F342C1 /* SRKSyncNodesList.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		91B4D141FA4E93C36494F7FEA4184946 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		92BAD1376723399E12EF8EC8AD0F391D /* SRKResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A30FF052302C6312DFB4194EB3944DE0 /* SRKResultSet.m */; };
+		92F1252639FEC4A2469B1348F6CC59B7 /* SRKUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2BAA0CFDAD96250EB81A20ABCC6450 /* SRKUtilities.m */; };
+		9483BFA4706E1046FA5DF91F599019F7 /* SyncNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDC22A2D576A6A79AC6D870C0A9BEB7 /* SyncNetwork.m */; };
+		9989F9FF6B9666717CA3A229F947D598 /* Pods-OSC-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D15DD195D2D75395EC237E76B8776D6F /* Pods-OSC-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B11791333E6E4919450F49C5633AE6B /* SyncService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD9AE874E813CB2FA4B86E09CE90B07 /* SyncService.m */; };
+		9B5149FB59CBB6B10ABAA6B5463A0BC7 /* SharkORM-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A4FEC9E035DC2241B5EC5CFD5817C0 /* SharkORM-dummy.m */; };
+		9C5905FBCA512119668F63205E2BE59F /* SharkSync+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 25B6EBAAE70C9D6E2EFA08342771704E /* SharkSync+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9DD345DBA6B2A28BDCFA431B40BDEA2B /* SRKIndexDefinition+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C15C56A1F60B83FA4B5DB669BB065866 /* SRKIndexDefinition+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A1C124EBD03F0D965DF72D90D7DDE24B /* SharkORM+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B0BB3F0E7385D20B034976E7F9D5163C /* SharkORM+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A1EC41966B261DCE460BCDE5124A1DBE /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4331876AC287BFAFE02837B3D24746A8 /* SessionDelegate.swift */; };
+		A2180D51C481C6237FE10250FFE0D188 /* SRKSyncObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E57AEFAEC5190874FEABC32E664E1016 /* SRKSyncObject.m */; };
+		A23442CFD68DFB980375113B6048ECD3 /* SyncNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = C99844E03780950F4C7CC4A447D86EF6 /* SyncNetwork.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A248F4FF6525F691AC31E671BA0AB1E5 /* SRKError.m in Sources */ = {isa = PBXBuildFile; fileRef = 73411D3835350AC2B4D13777AAF6CE57 /* SRKError.m */; };
+		A3D3B9BC11B5E6A782C7167DAB8DD426 /* SharkSchemaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B778C6D8250DF9CCF4D53ED7BE25B9DC /* SharkSchemaManager.m */; };
+		A665D24E40A984BE5EDFC7163B7B151F /* SyncComms.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EB06E93AAF6ACDE86C6BE33FFD37122 /* SyncComms.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A81CE4587AFAF45F0087CDD40328D97E /* SRKDefunctObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 82292E4008C4F9C3D8E3D9CB8D58881B /* SRKDefunctObject.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AA56769D8733D3F3E7976742D5ABA998 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319AD1660B560A5CA67E8429D1CF1F59 /* Validation.swift */; };
+		AEA829AB1A8AF2AD077A808AED6B178A /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C4AFA6B652336A59FC226BAEFE1CB /* MultipartFormData.swift */; };
+		B0D70B45A3DCA0696517FCF233536C0F /* SRKGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = F550E75A55515ECFB0A69E5259D0F196 /* SRKGlobals.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B0DBE68498BECCAD2D392494E7D98DA4 /* SyncRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 51DDACE65F75A997DD0048FF5285E829 /* SyncRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B5D4AD6E67753746C0CB18CED4E54EA2 /* SRKTransaction+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B931639BA420DD523E17B14C49000628 /* SRKTransaction+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B6F6E4CC26451E91B59FAE0F6841DC1F /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 065D12CD0E8D77EF22DAF476E8CAF80B /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC4CB8992DE6C06513E3791F3505C1EF /* SRKQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D91405471BBC792839A32D1B3420F9 /* SRKQuery.m */; };
+		BC73C69F5EEC0D750F02E3C98C62FB4C /* SRKUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 1411447CAA7CE3F4E464F6935EC02B3C /* SRKUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BED06B0DEEF70878422176CC310F2FAF /* SRKCommitOptions+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E03A364217CFBC4012EFFFEC7B280F1 /* SRKCommitOptions+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C4EBE6F2A47AA2FE112295955B2E9BAC /* SRKDeferredChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DEFA56C104F5D5C3B53278199AC85C /* SRKDeferredChange.m */; };
+		C681F2DD11817E0FB4921C355BD4C265 /* SRKSyncOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EB1376167A40A444694F4B58B5CF3EF /* SRKSyncOptions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C901CC12CBFDA99B3D3C2503147111F6 /* SyncService.h in Headers */ = {isa = PBXBuildFile; fileRef = 99986B727BAE66CFD2E08556E706EE12 /* SyncService.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CA3CE5B82E2307CAA6784C2C39554187 /* SRKEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 755848B7F4D01E9702962385D63E89C3 /* SRKEventHandler.m */; };
+		CA71EB22729D90CC85D0601C832AC1D8 /* SRKEventRegistryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 20912022D9163851CB8153E6778BB382 /* SRKEventRegistryObject.m */; };
+		CBCF69D5D4B2BF66F5C94CFBCC0F1D45 /* SRKCompoundIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0774056EB738BC909CEA16E8EB2DF /* SRKCompoundIndex.m */; };
+		CC35B38F58DB86DA0939F42EC7A4C069 /* SRKEventRegistryObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 23F7ED60C9445946F75AD433BB798F2A /* SRKEventRegistryObject.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D3FA0AA634AAEA99AB3FABC36BB4958C /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEA702B236F4F58612B4E37FAB129A8 /* SessionManager.swift */; };
+		D672AFE3A5198E44F4EC2A98F7C5E2BB /* SRKSyncNodesList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9441E9CF1DFC5E2A008D9032E63EF52B /* SRKSyncNodesList.m */; };
+		D731C556543E16A18740510154C28DA9 /* SRKStringObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B909BEDCA0E31CA5C7CED5CAEB94002 /* SRKStringObject.m */; };
+		D825FFFD75E1C6805A65B31FE35DA588 /* SRKObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2535020D9F5EBD89889215BA57690F4F /* SRKObject.m */; };
+		D945E84DE5EFC8CB8BF6EC21AE995980 /* SRKUnsupportedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 419AA814F06E3014A429ED4A8395F1FF /* SRKUnsupportedObject.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DFD252BCA9C4877C4E1BD137BAB9D407 /* sqlite3ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 59759165D5B7A6F82BE99F332846DF1E /* sqlite3ext.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DFDE7920B898794B9FFC2D20ECEDDE64 /* SRKAES256Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 510084A613B0AD2E02621AC469D95A18 /* SRKAES256Extension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E2E26BBD102BEBE1AD5F16658E4E3F07 /* SRKRawResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B96946B108F19A579691B1F609F1C9 /* SRKRawResults.m */; };
+		E4443219B11460BB6A0A27E4A2DA248C /* SRKSQLiteHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = E77F32D0760FC5C17E8819E5A9EAC39C /* SRKSQLiteHandle.m */; };
+		EB0DD8CEA1A69867A30267439C970440 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84C7F1D2601537791BA1CA36B47E482 /* Result.swift */; };
+		EB684EEBD7F744A63EDDEB56D18B9FF5 /* SRKAES256Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A89CCBF182F2D133B7F8E2444D51CC93 /* SRKAES256Extension.m */; };
+		EB91DCFDF2367B71075B5511C6439849 /* SRKEncryptedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F0574F546549E977FBB31A281E342D /* SRKEncryptedObject.m */; };
+		EBFF964F0C6DEA33E83850DE4F40B0F0 /* SRKLazyLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E001B08A81A1CF251045DE3C5A452382 /* SRKLazyLoader.m */; };
+		EFBB698F3C3CEF60628EF8D2ED778761 /* SRKIndexProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C6DE91319988DD3EDA34769BBF2ED4 /* SRKIndexProperty.m */; };
+		F1ECF2E3DF6EF2C4BD4BAAA5978620D3 /* SRKTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 714F4E33A990D9490EFD001B5D402DB0 /* SRKTransaction.m */; };
+		F425A447CACFA262F252E6BE89661A3B /* SRKContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 5317C808DFD76CE16923823337C064C5 /* SRKContext.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F810DD1F47A0427750BEE11832DDB937 /* SRKEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC9AA36598B8268426B9564E13D31EE /* SRKEvent.m */; };
+		F906C753C1CE6054B28AC390201CDE62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		FB8057ECC327F65525DA9A75FDCD17A1 /* SRKIndexDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2335FABE21A852413F6527E57698BDEE /* SRKIndexDefinition.m */; };
+		FC9E1CD17EA885061933DF5D33D2F5C1 /* SRKQueryProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = E203B14FFCB93EBF5863632B16C8BEA5 /* SRKQueryProfile.m */; };
+		FDB4AFE6B47B471EBEA68950205B855F /* SharkSyncChange.h in Headers */ = {isa = PBXBuildFile; fileRef = A2733FBF98AD41D8E65E6F537DE09BE3 /* SharkSyncChange.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		315FAEC637C138F639753EE3B7D74658 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61AB498995B1F22A8C3D0A89D3A50D37;
+			remoteInfo = SharkORM;
+		};
+		36CA1B260A205926FBEBFA26881C843D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3383968E74B5371B20BB519B170DC7FD;
+			remoteInfo = Alamofire;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01F0774056EB738BC909CEA16E8EB2DF /* SRKCompoundIndex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKCompoundIndex.m; path = SharkORM/Core/Indexing/SRKCompoundIndex.m; sourceTree = "<group>"; };
+		030A76B85D650A139542B57377CA08FF /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		043DD776DB5DA364AD109E0D2D686DE0 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		065D12CD0E8D77EF22DAF476E8CAF80B /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		099DD1A96793BAD68ECECDCF668B1565 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		09D91405471BBC792839A32D1B3420F9 /* SRKQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKQuery.m; path = SharkORM/Core/Queries/SRKQuery.m; sourceTree = "<group>"; };
+		0F73DDBED9D7305001B307AA46102263 /* Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alamofire-Info.plist"; sourceTree = "<group>"; };
+		1118A569B485FF0A05B1F4C09FD8C103 /* SRKTransactionInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKTransactionInfo.h; path = SharkORM/Core/Transactions/SRKTransactionInfo.h; sourceTree = "<group>"; };
+		1411447CAA7CE3F4E464F6935EC02B3C /* SRKUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKUtilities.h; path = SharkORM/Core/SRKUtilities.h; sourceTree = "<group>"; };
+		154417504BD62BD3FB6D667DB5DD3EC5 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		169DFA919A929164CFB8A79293E6530A /* SRKQuery+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SRKQuery+Private.h"; path = "SharkORM/Private/SRKQuery+Private.h"; sourceTree = "<group>"; };
+		17F0D12F8C79C87243607A45277A6FCC /* SRKJoinObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKJoinObject.h; path = SharkORM/Core/Queries/SRKJoinObject.h; sourceTree = "<group>"; };
+		18F0574F546549E977FBB31A281E342D /* SRKEncryptedObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKEncryptedObject.m; path = SharkORM/Core/PersistableObjects/SRKEncryptedObject.m; sourceTree = "<group>"; };
+		1ADBABD45492BB034E851FAB465B0958 /* SRKEntityChain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKEntityChain.m; path = SharkORM/Core/PersistableObjects/SRKEntityChain.m; sourceTree = "<group>"; };
+		1C3E238E2B7C41A57870CEBC65E0AE78 /* SRKJoinObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKJoinObject.m; path = SharkORM/Core/Queries/SRKJoinObject.m; sourceTree = "<group>"; };
+		1E03A364217CFBC4012EFFFEC7B280F1 /* SRKCommitOptions+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SRKCommitOptions+Private.h"; path = "SharkORM/Private/SRKCommitOptions+Private.h"; sourceTree = "<group>"; };
+		20912022D9163851CB8153E6778BB382 /* SRKEventRegistryObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKEventRegistryObject.m; path = SharkORM/Core/Events/SRKEventRegistryObject.m; sourceTree = "<group>"; };
+		21D7E07AE0BD80E26487041B89D7D8F7 /* SRKSyncObject+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SRKSyncObject+Private.h"; path = "SharkORM/Sync/SRKSyncObject+Private.h"; sourceTree = "<group>"; };
+		2335FABE21A852413F6527E57698BDEE /* SRKIndexDefinition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKIndexDefinition.m; path = SharkORM/Core/Indexing/SRKIndexDefinition.m; sourceTree = "<group>"; };
+		23F7ED60C9445946F75AD433BB798F2A /* SRKEventRegistryObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKEventRegistryObject.h; path = SharkORM/Core/Events/SRKEventRegistryObject.h; sourceTree = "<group>"; };
+		24279E65AD2B9FCE649AA00BBBA58DBC /* SharkORM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharkORM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2535020D9F5EBD89889215BA57690F4F /* SRKObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKObject.m; path = SharkORM/Core/PersistableObjects/SRKObject.m; sourceTree = "<group>"; };
+		25B6EBAAE70C9D6E2EFA08342771704E /* SharkSync+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SharkSync+Private.h"; path = "SharkORM/Sync/SharkSync+Private.h"; sourceTree = "<group>"; };
+		28248E265A2C8B84E8708F1BF8302261 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		2C488657B370BC5F633E7E23B5FAA2C1 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		2E6B630AA4B2A121CB4DF5455197E930 /* Pods-OSC-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OSC-acknowledgements.markdown"; sourceTree = "<group>"; };
+		302F0639C83BD48FAF147AFAF306D40F /* Pods-OSC-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OSC-frameworks.sh"; sourceTree = "<group>"; };
+		319AD1660B560A5CA67E8429D1CF1F59 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		327BAD7BE5E32C1B35591F77CC5E2799 /* SRKEntity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKEntity.m; path = SharkORM/Core/PersistableObjects/SRKEntity.m; sourceTree = "<group>"; };
+		330657659CFE8889C7BB581357E60228 /* Pods-OSC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OSC-dummy.m"; sourceTree = "<group>"; };
+		33C150151F336F43BE83E08A8E1E0F04 /* SharkSyncGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SharkSyncGroup.h; path = SharkORM/Sync/SharkSyncGroup.h; sourceTree = "<group>"; };
+		33D110849520F6D8119E4C0CBBFE8145 /* SharkSyncChange.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SharkSyncChange.m; path = SharkORM/Sync/SharkSyncChange.m; sourceTree = "<group>"; };
+		3ABA4185DE758071BA26D98E04F342C1 /* SRKSyncNodesList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKSyncNodesList.h; path = SharkORM/Sync/Comms/SRKSyncNodesList.h; sourceTree = "<group>"; };
+		3C1360AB9C1A61798627CF0EB7731D38 /* SRKTransactionInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKTransactionInfo.m; path = SharkORM/Core/Transactions/SRKTransactionInfo.m; sourceTree = "<group>"; };
+		3CD9AE874E813CB2FA4B86E09CE90B07 /* SyncService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SyncService.m; path = SharkORM/Sync/Comms/SyncService.m; sourceTree = "<group>"; };
+		3EB06E93AAF6ACDE86C6BE33FFD37122 /* SyncComms.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SyncComms.h; path = SharkORM/Sync/Comms/SyncComms.h; sourceTree = "<group>"; };
+		3EC775B1F7840E8480A13E74163D3380 /* SRKEventBlockHolder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKEventBlockHolder.m; path = SharkORM/Core/Events/SRKEventBlockHolder.m; sourceTree = "<group>"; };
+		419AA814F06E3014A429ED4A8395F1FF /* SRKUnsupportedObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKUnsupportedObject.h; path = SharkORM/Core/PersistableObjects/SRKUnsupportedObject.h; sourceTree = "<group>"; };
+		4331876AC287BFAFE02837B3D24746A8 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		510084A613B0AD2E02621AC469D95A18 /* SRKAES256Extension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKAES256Extension.h; path = SharkORM/Core/PersistableObjects/SRKAES256Extension.h; sourceTree = "<group>"; };
+		51DDACE65F75A997DD0048FF5285E829 /* SyncRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SyncRequest.h; path = SharkORM/Sync/Comms/SyncRequest.h; sourceTree = "<group>"; };
+		5317C808DFD76CE16923823337C064C5 /* SRKContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKContext.h; path = SharkORM/Core/Transactions/SRKContext.h; sourceTree = "<group>"; };
+		5335422490BD2B1E6562DE3033E48E5A /* SharkORM.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SharkORM.h; path = SharkORM/SharkORM.h; sourceTree = "<group>"; };
+		54FDD023892189C35F47AB7E1464C46C /* SRKEncryptedObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKEncryptedObject.h; path = SharkORM/Core/PersistableObjects/SRKEncryptedObject.h; sourceTree = "<group>"; };
+		553C07BD17E527EF47F1BED8F25A529B /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		56CB3B48099C4222130F3E9F40545D36 /* SharkSync.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SharkSync.m; path = SharkORM/Sync/SharkSync.m; sourceTree = "<group>"; };
+		59759165D5B7A6F82BE99F332846DF1E /* sqlite3ext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sqlite3ext.h; path = SharkORM/SQLite/sqlite3ext.h; sourceTree = "<group>"; };
+		5C186D0E35CA731ED43337853DB38A5F /* SRKGlobals.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKGlobals.m; path = SharkORM/Core/SRKGlobals.m; sourceTree = "<group>"; };
+		5EB1376167A40A444694F4B58B5CF3EF /* SRKSyncOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKSyncOptions.h; path = SharkORM/Sync/SRKSyncOptions.h; sourceTree = "<group>"; };
+		61B96946B108F19A579691B1F609F1C9 /* SRKRawResults.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKRawResults.m; path = SharkORM/Core/PersistableObjects/SRKRawResults.m; sourceTree = "<group>"; };
+		62DEFA56C104F5D5C3B53278199AC85C /* SRKDeferredChange.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKDeferredChange.m; path = SharkORM/Sync/SRKDeferredChange.m; sourceTree = "<group>"; };
+		660C175E1D0B4A7BC8169E0626C3B1AF /* sqlite3.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = sqlite3.c; path = SharkORM/SQLite/sqlite3.c; sourceTree = "<group>"; };
+		67D3278F73C7F19B7A6035A43A37BA95 /* SRKRegistryEntry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKRegistryEntry.m; path = SharkORM/Core/Registry/SRKRegistryEntry.m; sourceTree = "<group>"; };
+		69A4FEC9E035DC2241B5EC5CFD5817C0 /* SharkORM-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SharkORM-dummy.m"; sourceTree = "<group>"; };
+		6C0045EA84FACA1A3029ED9A6CB2444A /* SRKRegistry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKRegistry.m; path = SharkORM/Core/Registry/SRKRegistry.m; sourceTree = "<group>"; };
+		70A5B5E8872E13BE6CAEC3DC1085438C /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		714F4E33A990D9490EFD001B5D402DB0 /* SRKTransaction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKTransaction.m; path = SharkORM/Core/Transactions/SRKTransaction.m; sourceTree = "<group>"; };
+		73411D3835350AC2B4D13777AAF6CE57 /* SRKError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKError.m; path = SharkORM/Core/SRKError.m; sourceTree = "<group>"; };
+		755848B7F4D01E9702962385D63E89C3 /* SRKEventHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKEventHandler.m; path = SharkORM/Core/Events/SRKEventHandler.m; sourceTree = "<group>"; };
+		79345568781748E472DDBFF99D81E5D2 /* SRKRegistry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKRegistry.h; path = SharkORM/Core/Registry/SRKRegistry.h; sourceTree = "<group>"; };
+		798003A054649D7C113A3563790E2080 /* SRKEventBlockHolder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKEventBlockHolder.h; path = SharkORM/Core/Events/SRKEventBlockHolder.h; sourceTree = "<group>"; };
+		7B909BEDCA0E31CA5C7CED5CAEB94002 /* SRKStringObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKStringObject.m; path = SharkORM/Core/PersistableObjects/SRKStringObject.m; sourceTree = "<group>"; };
+		7DEF80AD63F35ED5F202F5B1286AFD9D /* SRKRelationship.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKRelationship.h; path = SharkORM/Core/SRKRelationship.h; sourceTree = "<group>"; };
+		7E94D481CEB7641D79448A61F688662D /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		7FEA702B236F4F58612B4E37FAB129A8 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		81844636049DA4D5C5031134AC95515B /* SharkORM-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SharkORM-Info.plist"; sourceTree = "<group>"; };
+		82292E4008C4F9C3D8E3D9CB8D58881B /* SRKDefunctObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKDefunctObject.h; path = SharkORM/Sync/SRKDefunctObject.h; sourceTree = "<group>"; };
+		86DD4544AD7DB4650C4D8563DD1A879E /* SharkORM.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SharkORM.xcconfig; sourceTree = "<group>"; };
+		88BA0A6DDF266A4DDB0194201EFB1247 /* SRKLazyLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKLazyLoader.h; path = SharkORM/Core/SRKLazyLoader.h; sourceTree = "<group>"; };
+		89531B07179A2B62874B3C9BD572D5EB /* SRKSyncRegisteredClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKSyncRegisteredClass.h; path = SharkORM/Sync/SRKSyncRegisteredClass.h; sourceTree = "<group>"; };
+		8AD656B6236A30A8F78C21FC315AC1A5 /* SharkORM.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SharkORM.modulemap; sourceTree = "<group>"; };
+		8B551FBE52C621AA3F6EBE3811106891 /* SyncRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SyncRequest.m; path = SharkORM/Sync/Comms/SyncRequest.m; sourceTree = "<group>"; };
+		8BB783B052E4AC36EFF8F6A5BC0485B3 /* SRKEntity+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SRKEntity+Private.h"; path = "SharkORM/Private/SRKEntity+Private.h"; sourceTree = "<group>"; };
+		8CB878CC4CD8F147E0CCFF925A866754 /* SharkSchemaManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SharkSchemaManager.h; path = SharkORM/Core/SharkSchemaManager.h; sourceTree = "<group>"; };
+		8E5BCDF1D6E0266481D10F962CA62685 /* SRKQueryAsyncHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKQueryAsyncHandler.m; path = SharkORM/Core/Queries/SRKQueryAsyncHandler.m; sourceTree = "<group>"; };
+		92680D334DDBCD5518992592CFE413B1 /* SRKQueryAsyncHandler+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SRKQueryAsyncHandler+Private.h"; path = "SharkORM/Private/SRKQueryAsyncHandler+Private.h"; sourceTree = "<group>"; };
+		928A211F2124CAE1066DC85DDB19EA4A /* SRKCompoundIndex+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SRKCompoundIndex+Private.h"; path = "SharkORM/Private/SRKCompoundIndex+Private.h"; sourceTree = "<group>"; };
+		9441E9CF1DFC5E2A008D9032E63EF52B /* SRKSyncNodesList.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKSyncNodesList.m; path = SharkORM/Sync/Comms/SRKSyncNodesList.m; sourceTree = "<group>"; };
+		960915253B9446DBF29090CACB02C5A0 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		98C19DBBDF439465B2D2F62E08FCBEB3 /* SRKRegistryEntry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKRegistryEntry.h; path = SharkORM/Core/Registry/SRKRegistryEntry.h; sourceTree = "<group>"; };
+		99986B727BAE66CFD2E08556E706EE12 /* SyncService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SyncService.h; path = SharkORM/Sync/Comms/SyncService.h; sourceTree = "<group>"; };
+		9C3003E883C9668C3E5AD23AFA84B1B0 /* SRKResultSet+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SRKResultSet+Private.h"; path = "SharkORM/Private/SRKResultSet+Private.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DA6D80144B8DFAF23272011D8A48ED5 /* Pods-OSC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OSC.debug.xcconfig"; sourceTree = "<group>"; };
+		9DC9AA36598B8268426B9564E13D31EE /* SRKEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKEvent.m; path = SharkORM/Core/Events/SRKEvent.m; sourceTree = "<group>"; };
+		9EA5981869A98DC1BF12422C40B5E9FF /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		9FDC22A2D576A6A79AC6D870C0A9BEB7 /* SyncNetwork.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SyncNetwork.m; path = SharkORM/Sync/Comms/SyncNetwork.m; sourceTree = "<group>"; };
+		A0E43C1B7C06A9A2FB57505FE9AED709 /* SRKRelationship.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKRelationship.m; path = SharkORM/Core/SRKRelationship.m; sourceTree = "<group>"; };
+		A2733FBF98AD41D8E65E6F537DE09BE3 /* SharkSyncChange.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SharkSyncChange.h; path = SharkORM/Sync/SharkSyncChange.h; sourceTree = "<group>"; };
+		A30FF052302C6312DFB4194EB3944DE0 /* SRKResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKResultSet.m; path = SharkORM/Core/PersistableObjects/SRKResultSet.m; sourceTree = "<group>"; };
+		A32A21A706D1B55871BDB2F28D946039 /* SRKDefunctObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKDefunctObject.m; path = SharkORM/Sync/SRKDefunctObject.m; sourceTree = "<group>"; };
+		A55A4F66C52D55EC6ADB697335E85AB2 /* SRKSettings.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKSettings.m; path = SharkORM/Core/SRKSettings.m; sourceTree = "<group>"; };
+		A877BA9AED699EDC040FB40724246330 /* SharkORM.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SharkORM.m; path = SharkORM/Core/SharkORM.m; sourceTree = "<group>"; };
+		A89CCBF182F2D133B7F8E2444D51CC93 /* SRKAES256Extension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKAES256Extension.m; path = SharkORM/Core/PersistableObjects/SRKAES256Extension.m; sourceTree = "<group>"; };
+		A8E0022A368FC658F105EF0AA45D9547 /* SharkORM-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SharkORM-prefix.pch"; sourceTree = "<group>"; };
+		A9D920295052D9E6289D499204798761 /* SRKSyncRegisteredClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKSyncRegisteredClass.m; path = SharkORM/Sync/SRKSyncRegisteredClass.m; sourceTree = "<group>"; };
+		AA11279358DAED4E3F32A7A1B854BE3E /* sqlite3.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sqlite3.h; path = SharkORM/SQLite/sqlite3.h; sourceTree = "<group>"; };
+		AB77B7EF1166842FD3FEAD1DF1E915CF /* Pods-OSC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OSC.modulemap"; sourceTree = "<group>"; };
+		AD519D731CE495D38CA1D759D94C80F2 /* SRKSyncOptions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKSyncOptions.m; path = SharkORM/Sync/SRKSyncOptions.m; sourceTree = "<group>"; };
+		B0BB3F0E7385D20B034976E7F9D5163C /* SharkORM+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SharkORM+Private.h"; path = "SharkORM/Private/SharkORM+Private.h"; sourceTree = "<group>"; };
+		B1E987797093B8ECD652E896EF3E7068 /* SRKUnsupportedObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKUnsupportedObject.m; path = SharkORM/Core/PersistableObjects/SRKUnsupportedObject.m; sourceTree = "<group>"; };
+		B43FDCAE072E351853232008B0B4EED9 /* SRKEventHandler+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SRKEventHandler+Private.h"; path = "SharkORM/Private/SRKEventHandler+Private.h"; sourceTree = "<group>"; };
+		B778C6D8250DF9CCF4D53ED7BE25B9DC /* SharkSchemaManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SharkSchemaManager.m; path = SharkORM/Core/SharkSchemaManager.m; sourceTree = "<group>"; };
+		B7CABF8FACC94947CCAE7B9FF4248DAF /* Pods_OSC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OSC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B800314598500A362B59E4BC618F2231 /* SRKSQLiteHandle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKSQLiteHandle.h; path = SharkORM/Core/SRKSQLiteHandle.h; sourceTree = "<group>"; };
+		B83B43139C62651C8B21B098FFF812ED /* SRKCommitOptions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKCommitOptions.m; path = SharkORM/Core/PersistableObjects/SRKCommitOptions.m; sourceTree = "<group>"; };
+		B931639BA420DD523E17B14C49000628 /* SRKTransaction+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SRKTransaction+Private.h"; path = "SharkORM/Private/SRKTransaction+Private.h"; sourceTree = "<group>"; };
+		BCCA45EA3E24C3631ADC26D89C6F8831 /* Pods-OSC-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OSC-acknowledgements.plist"; sourceTree = "<group>"; };
+		BEFCB3EC68F128D572AF5390E3FA8FDC /* SRKEntityChain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKEntityChain.h; path = SharkORM/Core/PersistableObjects/SRKEntityChain.h; sourceTree = "<group>"; };
+		C15C56A1F60B83FA4B5DB669BB065866 /* SRKIndexDefinition+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SRKIndexDefinition+Private.h"; path = "SharkORM/Private/SRKIndexDefinition+Private.h"; sourceTree = "<group>"; };
+		C202C5CB1947FA9940C0D7E0EE8B277B /* Pods-OSC-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OSC-Info.plist"; sourceTree = "<group>"; };
+		C2EB40105BE036DC05671F6710773CA1 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4353592478EE55BF22C11C787DBA907 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		C56F7A5840A3F7F305E10168C976A764 /* Pods-OSC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OSC.release.xcconfig"; sourceTree = "<group>"; };
+		C5C6DE91319988DD3EDA34769BBF2ED4 /* SRKIndexProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKIndexProperty.m; path = SharkORM/Core/Indexing/SRKIndexProperty.m; sourceTree = "<group>"; };
+		C65C4AFA6B652336A59FC226BAEFE1CB /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		C99844E03780950F4C7CC4A447D86EF6 /* SyncNetwork.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SyncNetwork.h; path = SharkORM/Sync/Comms/SyncNetwork.h; sourceTree = "<group>"; };
+		CB05DA4BE0C286E9ADC45E01548959FB /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		CB255B7CA941DD64575878CBD1E204C6 /* SRKContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKContext.m; path = SharkORM/Core/Transactions/SRKContext.m; sourceTree = "<group>"; };
+		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CE5A6D088E504C3D7693129F6836E99E /* SRKDefinitions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKDefinitions.h; path = SharkORM/Core/SRKDefinitions.h; sourceTree = "<group>"; };
+		CF07972A3633F6D70F33A2F0185FDB32 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		D15DD195D2D75395EC237E76B8776D6F /* Pods-OSC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OSC-umbrella.h"; sourceTree = "<group>"; };
+		D60C14C93A8747F25DBC054D3A9CE60C /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		D84C7F1D2601537791BA1CA36B47E482 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		DF82D23E93F8572274086303A60E6221 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		E001B08A81A1CF251045DE3C5A452382 /* SRKLazyLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKLazyLoader.m; path = SharkORM/Core/SRKLazyLoader.m; sourceTree = "<group>"; };
+		E203B14FFCB93EBF5863632B16C8BEA5 /* SRKQueryProfile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKQueryProfile.m; path = SharkORM/Core/Queries/SRKQueryProfile.m; sourceTree = "<group>"; };
+		E57AEFAEC5190874FEABC32E664E1016 /* SRKSyncObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKSyncObject.m; path = SharkORM/Sync/SRKSyncObject.m; sourceTree = "<group>"; };
+		E77F32D0760FC5C17E8819E5A9EAC39C /* SRKSQLiteHandle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKSQLiteHandle.m; path = SharkORM/Core/SRKSQLiteHandle.m; sourceTree = "<group>"; };
+		EC2BAA0CFDAD96250EB81A20ABCC6450 /* SRKUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKUtilities.m; path = SharkORM/Core/SRKUtilities.m; sourceTree = "<group>"; };
+		EDC3EAF63609F060431A29F4BBD9448C /* SharkSyncGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SharkSyncGroup.m; path = SharkORM/Sync/SharkSyncGroup.m; sourceTree = "<group>"; };
+		EF7F97A391CE4AFF542C7FE50D3E62D0 /* SRKDeferredChange.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKDeferredChange.h; path = SharkORM/Sync/SRKDeferredChange.h; sourceTree = "<group>"; };
+		F550E75A55515ECFB0A69E5259D0F196 /* SRKGlobals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKGlobals.h; path = SharkORM/Core/SRKGlobals.h; sourceTree = "<group>"; };
+		FAC92303342B3D86AAEE35BBF4F13B54 /* SyncComms.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SyncComms.m; path = SharkORM/Sync/Comms/SyncComms.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D1B9ED9624C9DC53FDD7B3FDDF7123A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91B4D141FA4E93C36494F7FEA4184946 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B034165845F67D85D652BEB9B87B03E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F906C753C1CE6054B28AC390201CDE62 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1626ADC3A7EC435D2722B3173355D36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BD1DAFE1F3E6C9E4EB0F2099B6D6FA2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67B4DB48ABC1E9EB16C81E4AC91EF595 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				099DD1A96793BAD68ECECDCF668B1565 /* AFError.swift */,
+				154417504BD62BD3FB6D667DB5DD3EC5 /* Alamofire.swift */,
+				043DD776DB5DA364AD109E0D2D686DE0 /* DispatchQueue+Alamofire.swift */,
+				C65C4AFA6B652336A59FC226BAEFE1CB /* MultipartFormData.swift */,
+				7E94D481CEB7641D79448A61F688662D /* NetworkReachabilityManager.swift */,
+				960915253B9446DBF29090CACB02C5A0 /* Notifications.swift */,
+				CF07972A3633F6D70F33A2F0185FDB32 /* ParameterEncoding.swift */,
+				DF82D23E93F8572274086303A60E6221 /* Request.swift */,
+				28248E265A2C8B84E8708F1BF8302261 /* Response.swift */,
+				030A76B85D650A139542B57377CA08FF /* ResponseSerialization.swift */,
+				D84C7F1D2601537791BA1CA36B47E482 /* Result.swift */,
+				D60C14C93A8747F25DBC054D3A9CE60C /* ServerTrustPolicy.swift */,
+				4331876AC287BFAFE02837B3D24746A8 /* SessionDelegate.swift */,
+				7FEA702B236F4F58612B4E37FAB129A8 /* SessionManager.swift */,
+				553C07BD17E527EF47F1BED8F25A529B /* TaskDelegate.swift */,
+				70A5B5E8872E13BE6CAEC3DC1085438C /* Timeline.swift */,
+				319AD1660B560A5CA67E8429D1CF1F59 /* Validation.swift */,
+				F28112A92E06BA9B481DE33A703849F7 /* Support Files */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		723FCD81E481DA888D7AC18BC25D2F35 /* Pods-OSC */ = {
+			isa = PBXGroup;
+			children = (
+				AB77B7EF1166842FD3FEAD1DF1E915CF /* Pods-OSC.modulemap */,
+				2E6B630AA4B2A121CB4DF5455197E930 /* Pods-OSC-acknowledgements.markdown */,
+				BCCA45EA3E24C3631ADC26D89C6F8831 /* Pods-OSC-acknowledgements.plist */,
+				330657659CFE8889C7BB581357E60228 /* Pods-OSC-dummy.m */,
+				302F0639C83BD48FAF147AFAF306D40F /* Pods-OSC-frameworks.sh */,
+				C202C5CB1947FA9940C0D7E0EE8B277B /* Pods-OSC-Info.plist */,
+				D15DD195D2D75395EC237E76B8776D6F /* Pods-OSC-umbrella.h */,
+				9DA6D80144B8DFAF23272011D8A48ED5 /* Pods-OSC.debug.xcconfig */,
+				C56F7A5840A3F7F305E10168C976A764 /* Pods-OSC.release.xcconfig */,
+			);
+			name = "Pods-OSC";
+			path = "Target Support Files/Pods-OSC";
+			sourceTree = "<group>";
+		};
+		9167756D0840B561DDEB130B7CF6D43C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67B4DB48ABC1E9EB16C81E4AC91EF595 /* Alamofire */,
+				C9803C3C7A3D5DDD6954FDF71EE7989E /* SharkORM */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		A8C5FEB8476ECD2A42FFC7388E729D88 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				723FCD81E481DA888D7AC18BC25D2F35 /* Pods-OSC */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B434BE33CB37082AA4BD0E80815155C5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AD656B6236A30A8F78C21FC315AC1A5 /* SharkORM.modulemap */,
+				86DD4544AD7DB4650C4D8563DD1A879E /* SharkORM.xcconfig */,
+				69A4FEC9E035DC2241B5EC5CFD5817C0 /* SharkORM-dummy.m */,
+				81844636049DA4D5C5031134AC95515B /* SharkORM-Info.plist */,
+				A8E0022A368FC658F105EF0AA45D9547 /* SharkORM-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SharkORM";
+			sourceTree = "<group>";
+		};
+		C9803C3C7A3D5DDD6954FDF71EE7989E /* SharkORM */ = {
+			isa = PBXGroup;
+			children = (
+				5335422490BD2B1E6562DE3033E48E5A /* SharkORM.h */,
+				A877BA9AED699EDC040FB40724246330 /* SharkORM.m */,
+				B0BB3F0E7385D20B034976E7F9D5163C /* SharkORM+Private.h */,
+				8CB878CC4CD8F147E0CCFF925A866754 /* SharkSchemaManager.h */,
+				B778C6D8250DF9CCF4D53ED7BE25B9DC /* SharkSchemaManager.m */,
+				56CB3B48099C4222130F3E9F40545D36 /* SharkSync.m */,
+				25B6EBAAE70C9D6E2EFA08342771704E /* SharkSync+Private.h */,
+				A2733FBF98AD41D8E65E6F537DE09BE3 /* SharkSyncChange.h */,
+				33D110849520F6D8119E4C0CBBFE8145 /* SharkSyncChange.m */,
+				33C150151F336F43BE83E08A8E1E0F04 /* SharkSyncGroup.h */,
+				EDC3EAF63609F060431A29F4BBD9448C /* SharkSyncGroup.m */,
+				660C175E1D0B4A7BC8169E0626C3B1AF /* sqlite3.c */,
+				AA11279358DAED4E3F32A7A1B854BE3E /* sqlite3.h */,
+				59759165D5B7A6F82BE99F332846DF1E /* sqlite3ext.h */,
+				510084A613B0AD2E02621AC469D95A18 /* SRKAES256Extension.h */,
+				A89CCBF182F2D133B7F8E2444D51CC93 /* SRKAES256Extension.m */,
+				B83B43139C62651C8B21B098FFF812ED /* SRKCommitOptions.m */,
+				1E03A364217CFBC4012EFFFEC7B280F1 /* SRKCommitOptions+Private.h */,
+				01F0774056EB738BC909CEA16E8EB2DF /* SRKCompoundIndex.m */,
+				928A211F2124CAE1066DC85DDB19EA4A /* SRKCompoundIndex+Private.h */,
+				5317C808DFD76CE16923823337C064C5 /* SRKContext.h */,
+				CB255B7CA941DD64575878CBD1E204C6 /* SRKContext.m */,
+				EF7F97A391CE4AFF542C7FE50D3E62D0 /* SRKDeferredChange.h */,
+				62DEFA56C104F5D5C3B53278199AC85C /* SRKDeferredChange.m */,
+				CE5A6D088E504C3D7693129F6836E99E /* SRKDefinitions.h */,
+				82292E4008C4F9C3D8E3D9CB8D58881B /* SRKDefunctObject.h */,
+				A32A21A706D1B55871BDB2F28D946039 /* SRKDefunctObject.m */,
+				54FDD023892189C35F47AB7E1464C46C /* SRKEncryptedObject.h */,
+				18F0574F546549E977FBB31A281E342D /* SRKEncryptedObject.m */,
+				327BAD7BE5E32C1B35591F77CC5E2799 /* SRKEntity.m */,
+				8BB783B052E4AC36EFF8F6A5BC0485B3 /* SRKEntity+Private.h */,
+				BEFCB3EC68F128D572AF5390E3FA8FDC /* SRKEntityChain.h */,
+				1ADBABD45492BB034E851FAB465B0958 /* SRKEntityChain.m */,
+				73411D3835350AC2B4D13777AAF6CE57 /* SRKError.m */,
+				9DC9AA36598B8268426B9564E13D31EE /* SRKEvent.m */,
+				798003A054649D7C113A3563790E2080 /* SRKEventBlockHolder.h */,
+				3EC775B1F7840E8480A13E74163D3380 /* SRKEventBlockHolder.m */,
+				755848B7F4D01E9702962385D63E89C3 /* SRKEventHandler.m */,
+				B43FDCAE072E351853232008B0B4EED9 /* SRKEventHandler+Private.h */,
+				23F7ED60C9445946F75AD433BB798F2A /* SRKEventRegistryObject.h */,
+				20912022D9163851CB8153E6778BB382 /* SRKEventRegistryObject.m */,
+				F550E75A55515ECFB0A69E5259D0F196 /* SRKGlobals.h */,
+				5C186D0E35CA731ED43337853DB38A5F /* SRKGlobals.m */,
+				2335FABE21A852413F6527E57698BDEE /* SRKIndexDefinition.m */,
+				C15C56A1F60B83FA4B5DB669BB065866 /* SRKIndexDefinition+Private.h */,
+				C5C6DE91319988DD3EDA34769BBF2ED4 /* SRKIndexProperty.m */,
+				17F0D12F8C79C87243607A45277A6FCC /* SRKJoinObject.h */,
+				1C3E238E2B7C41A57870CEBC65E0AE78 /* SRKJoinObject.m */,
+				88BA0A6DDF266A4DDB0194201EFB1247 /* SRKLazyLoader.h */,
+				E001B08A81A1CF251045DE3C5A452382 /* SRKLazyLoader.m */,
+				2535020D9F5EBD89889215BA57690F4F /* SRKObject.m */,
+				09D91405471BBC792839A32D1B3420F9 /* SRKQuery.m */,
+				169DFA919A929164CFB8A79293E6530A /* SRKQuery+Private.h */,
+				8E5BCDF1D6E0266481D10F962CA62685 /* SRKQueryAsyncHandler.m */,
+				92680D334DDBCD5518992592CFE413B1 /* SRKQueryAsyncHandler+Private.h */,
+				E203B14FFCB93EBF5863632B16C8BEA5 /* SRKQueryProfile.m */,
+				61B96946B108F19A579691B1F609F1C9 /* SRKRawResults.m */,
+				79345568781748E472DDBFF99D81E5D2 /* SRKRegistry.h */,
+				6C0045EA84FACA1A3029ED9A6CB2444A /* SRKRegistry.m */,
+				98C19DBBDF439465B2D2F62E08FCBEB3 /* SRKRegistryEntry.h */,
+				67D3278F73C7F19B7A6035A43A37BA95 /* SRKRegistryEntry.m */,
+				7DEF80AD63F35ED5F202F5B1286AFD9D /* SRKRelationship.h */,
+				A0E43C1B7C06A9A2FB57505FE9AED709 /* SRKRelationship.m */,
+				A30FF052302C6312DFB4194EB3944DE0 /* SRKResultSet.m */,
+				9C3003E883C9668C3E5AD23AFA84B1B0 /* SRKResultSet+Private.h */,
+				A55A4F66C52D55EC6ADB697335E85AB2 /* SRKSettings.m */,
+				B800314598500A362B59E4BC618F2231 /* SRKSQLiteHandle.h */,
+				E77F32D0760FC5C17E8819E5A9EAC39C /* SRKSQLiteHandle.m */,
+				7B909BEDCA0E31CA5C7CED5CAEB94002 /* SRKStringObject.m */,
+				3ABA4185DE758071BA26D98E04F342C1 /* SRKSyncNodesList.h */,
+				9441E9CF1DFC5E2A008D9032E63EF52B /* SRKSyncNodesList.m */,
+				E57AEFAEC5190874FEABC32E664E1016 /* SRKSyncObject.m */,
+				21D7E07AE0BD80E26487041B89D7D8F7 /* SRKSyncObject+Private.h */,
+				5EB1376167A40A444694F4B58B5CF3EF /* SRKSyncOptions.h */,
+				AD519D731CE495D38CA1D759D94C80F2 /* SRKSyncOptions.m */,
+				89531B07179A2B62874B3C9BD572D5EB /* SRKSyncRegisteredClass.h */,
+				A9D920295052D9E6289D499204798761 /* SRKSyncRegisteredClass.m */,
+				714F4E33A990D9490EFD001B5D402DB0 /* SRKTransaction.m */,
+				B931639BA420DD523E17B14C49000628 /* SRKTransaction+Private.h */,
+				1118A569B485FF0A05B1F4C09FD8C103 /* SRKTransactionInfo.h */,
+				3C1360AB9C1A61798627CF0EB7731D38 /* SRKTransactionInfo.m */,
+				419AA814F06E3014A429ED4A8395F1FF /* SRKUnsupportedObject.h */,
+				B1E987797093B8ECD652E896EF3E7068 /* SRKUnsupportedObject.m */,
+				1411447CAA7CE3F4E464F6935EC02B3C /* SRKUtilities.h */,
+				EC2BAA0CFDAD96250EB81A20ABCC6450 /* SRKUtilities.m */,
+				3EB06E93AAF6ACDE86C6BE33FFD37122 /* SyncComms.h */,
+				FAC92303342B3D86AAEE35BBF4F13B54 /* SyncComms.m */,
+				C99844E03780950F4C7CC4A447D86EF6 /* SyncNetwork.h */,
+				9FDC22A2D576A6A79AC6D870C0A9BEB7 /* SyncNetwork.m */,
+				51DDACE65F75A997DD0048FF5285E829 /* SyncRequest.h */,
+				8B551FBE52C621AA3F6EBE3811106891 /* SyncRequest.m */,
+				99986B727BAE66CFD2E08556E706EE12 /* SyncService.h */,
+				3CD9AE874E813CB2FA4B86E09CE90B07 /* SyncService.m */,
+				B434BE33CB37082AA4BD0E80815155C5 /* Support Files */,
+			);
+			path = SharkORM;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				9167756D0840B561DDEB130B7CF6D43C /* Pods */,
+				E1811F74A729C09B9CA398F1BDD0BD48 /* Products */,
+				A8C5FEB8476ECD2A42FFC7388E729D88 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1811F74A729C09B9CA398F1BDD0BD48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2EB40105BE036DC05671F6710773CA1 /* Alamofire.framework */,
+				B7CABF8FACC94947CCAE7B9FF4248DAF /* Pods_OSC.framework */,
+				24279E65AD2B9FCE649AA00BBBA58DBC /* SharkORM.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F28112A92E06BA9B481DE33A703849F7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C488657B370BC5F633E7E23B5FAA2C1 /* Alamofire.modulemap */,
+				9EA5981869A98DC1BF12422C40B5E9FF /* Alamofire.xcconfig */,
+				C4353592478EE55BF22C11C787DBA907 /* Alamofire-dummy.m */,
+				0F73DDBED9D7305001B307AA46102263 /* Alamofire-Info.plist */,
+				CB05DA4BE0C286E9ADC45E01548959FB /* Alamofire-prefix.pch */,
+				065D12CD0E8D77EF22DAF476E8CAF80B /* Alamofire-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1514F2690E9D251EBB203517A3F750D5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1C124EBD03F0D965DF72D90D7DDE24B /* SharkORM+Private.h in Headers */,
+				7DD87D064A3ECF549E28DB66A1AE18FD /* SharkORM.h in Headers */,
+				09A498AFB03D32ECF95C4AC3EFB61CD1 /* SharkSchemaManager.h in Headers */,
+				9C5905FBCA512119668F63205E2BE59F /* SharkSync+Private.h in Headers */,
+				FDB4AFE6B47B471EBEA68950205B855F /* SharkSyncChange.h in Headers */,
+				3929E836ADA2D059B4AE6A894223ED60 /* SharkSyncGroup.h in Headers */,
+				1D5A3082634FEF496A6BB3DD2F91773A /* sqlite3.h in Headers */,
+				DFD252BCA9C4877C4E1BD137BAB9D407 /* sqlite3ext.h in Headers */,
+				DFDE7920B898794B9FFC2D20ECEDDE64 /* SRKAES256Extension.h in Headers */,
+				BED06B0DEEF70878422176CC310F2FAF /* SRKCommitOptions+Private.h in Headers */,
+				841F8A6F3406CBEAB6508EA93BA599CA /* SRKCompoundIndex+Private.h in Headers */,
+				F425A447CACFA262F252E6BE89661A3B /* SRKContext.h in Headers */,
+				6FF755779AC9EBB70FB98EB092058E59 /* SRKDeferredChange.h in Headers */,
+				323D24A71EA0FF7C16F89EFE2CA1F1D7 /* SRKDefinitions.h in Headers */,
+				A81CE4587AFAF45F0087CDD40328D97E /* SRKDefunctObject.h in Headers */,
+				4CCD4550B83D95648F672EBA9714D924 /* SRKEncryptedObject.h in Headers */,
+				07605BC43650A1712B43702E1959B236 /* SRKEntity+Private.h in Headers */,
+				28571F80513663BB35356655400D10CB /* SRKEntityChain.h in Headers */,
+				2A50052A779F6BC01F7CB01943A4F3B0 /* SRKEventBlockHolder.h in Headers */,
+				787F80AE83E0C899F41E3AF8C3915123 /* SRKEventHandler+Private.h in Headers */,
+				CC35B38F58DB86DA0939F42EC7A4C069 /* SRKEventRegistryObject.h in Headers */,
+				B0D70B45A3DCA0696517FCF233536C0F /* SRKGlobals.h in Headers */,
+				9DD345DBA6B2A28BDCFA431B40BDEA2B /* SRKIndexDefinition+Private.h in Headers */,
+				415791F1940A1541403ACCA0940BC441 /* SRKJoinObject.h in Headers */,
+				281EC5FEE385F3D11D5047EC33B0DD65 /* SRKLazyLoader.h in Headers */,
+				6A2CA76A1EDAADA45C3D8C62EFCE3BD5 /* SRKQuery+Private.h in Headers */,
+				39EE23850F9596B1CB593082D5F012A3 /* SRKQueryAsyncHandler+Private.h in Headers */,
+				7243C8FE9D8F724ECE751E9A73E463A9 /* SRKRegistry.h in Headers */,
+				050473E4CCF27072C1CFB67E332FD9B7 /* SRKRegistryEntry.h in Headers */,
+				2F9E88933194FB1815EB636E35021EFF /* SRKRelationship.h in Headers */,
+				85E723D4C54FB9F327AA2033DC1A0136 /* SRKResultSet+Private.h in Headers */,
+				54CFF8E0B515235A29F48855791A55DA /* SRKSQLiteHandle.h in Headers */,
+				90CD3F557A7722BAA43E0AEBF7BEEF1C /* SRKSyncNodesList.h in Headers */,
+				00788F709E3DB5848090DBC621F63887 /* SRKSyncObject+Private.h in Headers */,
+				C681F2DD11817E0FB4921C355BD4C265 /* SRKSyncOptions.h in Headers */,
+				438ADED4C8A3DB10BA9D14C44FF1608A /* SRKSyncRegisteredClass.h in Headers */,
+				B5D4AD6E67753746C0CB18CED4E54EA2 /* SRKTransaction+Private.h in Headers */,
+				68FFE93D42F4E966B21D9A8080016540 /* SRKTransactionInfo.h in Headers */,
+				D945E84DE5EFC8CB8BF6EC21AE995980 /* SRKUnsupportedObject.h in Headers */,
+				BC73C69F5EEC0D750F02E3C98C62FB4C /* SRKUtilities.h in Headers */,
+				A665D24E40A984BE5EDFC7163B7B151F /* SyncComms.h in Headers */,
+				A23442CFD68DFB980375113B6048ECD3 /* SyncNetwork.h in Headers */,
+				B0DBE68498BECCAD2D392494E7D98DA4 /* SyncRequest.h in Headers */,
+				C901CC12CBFDA99B3D3C2503147111F6 /* SyncService.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2303848FA10E321416B0471792753602 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9989F9FF6B9666717CA3A229F947D598 /* Pods-OSC-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23D70D9651451F43E7E8CC1A87B4B7E9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6F6E4CC26451E91B59FAE0F6841DC1F /* Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3383968E74B5371B20BB519B170DC7FD /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E87124444A44B7DB55208E7FEC21D331 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+				23D70D9651451F43E7E8CC1A87B4B7E9 /* Headers */,
+				A1C8B029F600160149A2404C342F6E50 /* Sources */,
+				F1626ADC3A7EC435D2722B3173355D36 /* Frameworks */,
+				28FF73341543B6F0A7DF3C20CFFEA0AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = C2EB40105BE036DC05671F6710773CA1 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		61AB498995B1F22A8C3D0A89D3A50D37 /* SharkORM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC25F6C849A2B4F0711A657EA1107F05 /* Build configuration list for PBXNativeTarget "SharkORM" */;
+			buildPhases = (
+				1514F2690E9D251EBB203517A3F750D5 /* Headers */,
+				1E6B5631E873019D0C0CE9F6D7360DCB /* Sources */,
+				B034165845F67D85D652BEB9B87B03E7 /* Frameworks */,
+				72525E0AE5F876F10F000BC7E82706BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SharkORM;
+			productName = SharkORM;
+			productReference = 24279E65AD2B9FCE649AA00BBBA58DBC /* SharkORM.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AD8CA3D85A911E75AB40414EDD569157 /* Pods-OSC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4770623EBC16918FAA4082414EF5C59 /* Build configuration list for PBXNativeTarget "Pods-OSC" */;
+			buildPhases = (
+				2303848FA10E321416B0471792753602 /* Headers */,
+				74A67FCED3C447B046732C859D1718F6 /* Sources */,
+				5D1B9ED9624C9DC53FDD7B3FDDF7123A /* Frameworks */,
+				AD5998D02A944DDD5B347F7A83D72F81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A2819D1134FEE8190FDA95ACE1B1559 /* PBXTargetDependency */,
+				CD7856D2B607275D469B8773EE28DC14 /* PBXTargetDependency */,
+			);
+			name = "Pods-OSC";
+			productName = "Pods-OSC";
+			productReference = B7CABF8FACC94947CCAE7B9FF4248DAF /* Pods_OSC.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 1020;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = E1811F74A729C09B9CA398F1BDD0BD48 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3383968E74B5371B20BB519B170DC7FD /* Alamofire */,
+				AD8CA3D85A911E75AB40414EDD569157 /* Pods-OSC */,
+				61AB498995B1F22A8C3D0A89D3A50D37 /* SharkORM */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		28FF73341543B6F0A7DF3C20CFFEA0AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72525E0AE5F876F10F000BC7E82706BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD5998D02A944DDD5B347F7A83D72F81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E6B5631E873019D0C0CE9F6D7360DCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B5149FB59CBB6B10ABAA6B5463A0BC7 /* SharkORM-dummy.m in Sources */,
+				4CC637ECCBD91B834D9D8A320CEA1A9E /* SharkORM.m in Sources */,
+				A3D3B9BC11B5E6A782C7167DAB8DD426 /* SharkSchemaManager.m in Sources */,
+				2E777014AA8F729A57D5B55DB133075D /* SharkSync.m in Sources */,
+				00DC3D3DC607A8F65DF67A8F2C9FC8DD /* SharkSyncChange.m in Sources */,
+				23DAEE0C2AA9C1307EC88F6C030BF852 /* SharkSyncGroup.m in Sources */,
+				47829804455B75316092F18EDAA37573 /* sqlite3.c in Sources */,
+				EB684EEBD7F744A63EDDEB56D18B9FF5 /* SRKAES256Extension.m in Sources */,
+				4A34F71E220F41523577F1F62E94E0FA /* SRKCommitOptions.m in Sources */,
+				CBCF69D5D4B2BF66F5C94CFBCC0F1D45 /* SRKCompoundIndex.m in Sources */,
+				30F5BF17F1F377C9EBB6897AC4D358A3 /* SRKContext.m in Sources */,
+				C4EBE6F2A47AA2FE112295955B2E9BAC /* SRKDeferredChange.m in Sources */,
+				605FA26B520CFBD16F7F79BDB0B87DDB /* SRKDefunctObject.m in Sources */,
+				EB91DCFDF2367B71075B5511C6439849 /* SRKEncryptedObject.m in Sources */,
+				353E9778958D0A291CAFB5640DD2C275 /* SRKEntity.m in Sources */,
+				4110B1EF483222208F76A237EA861B28 /* SRKEntityChain.m in Sources */,
+				A248F4FF6525F691AC31E671BA0AB1E5 /* SRKError.m in Sources */,
+				F810DD1F47A0427750BEE11832DDB937 /* SRKEvent.m in Sources */,
+				3C04C77A57A2D831FA3E48CE28FB596E /* SRKEventBlockHolder.m in Sources */,
+				CA3CE5B82E2307CAA6784C2C39554187 /* SRKEventHandler.m in Sources */,
+				CA71EB22729D90CC85D0601C832AC1D8 /* SRKEventRegistryObject.m in Sources */,
+				17108D6DA267E46BE4CE84274FEA90D0 /* SRKGlobals.m in Sources */,
+				FB8057ECC327F65525DA9A75FDCD17A1 /* SRKIndexDefinition.m in Sources */,
+				EFBB698F3C3CEF60628EF8D2ED778761 /* SRKIndexProperty.m in Sources */,
+				3B29FEAA3414DBC2D39809F4AF78DF52 /* SRKJoinObject.m in Sources */,
+				EBFF964F0C6DEA33E83850DE4F40B0F0 /* SRKLazyLoader.m in Sources */,
+				D825FFFD75E1C6805A65B31FE35DA588 /* SRKObject.m in Sources */,
+				BC4CB8992DE6C06513E3791F3505C1EF /* SRKQuery.m in Sources */,
+				1A31035A7062BAA7C2C213A79B3DC6FB /* SRKQueryAsyncHandler.m in Sources */,
+				FC9E1CD17EA885061933DF5D33D2F5C1 /* SRKQueryProfile.m in Sources */,
+				E2E26BBD102BEBE1AD5F16658E4E3F07 /* SRKRawResults.m in Sources */,
+				74C09DCA740548075BC3A830D7DCADAC /* SRKRegistry.m in Sources */,
+				6C3A6E0A0E4AD30CE952F817A4574C08 /* SRKRegistryEntry.m in Sources */,
+				75234DA030F11A657F57F74B73D98434 /* SRKRelationship.m in Sources */,
+				92BAD1376723399E12EF8EC8AD0F391D /* SRKResultSet.m in Sources */,
+				119C177F5AEDEB89A7D8261F2378AF8D /* SRKSettings.m in Sources */,
+				E4443219B11460BB6A0A27E4A2DA248C /* SRKSQLiteHandle.m in Sources */,
+				D731C556543E16A18740510154C28DA9 /* SRKStringObject.m in Sources */,
+				D672AFE3A5198E44F4EC2A98F7C5E2BB /* SRKSyncNodesList.m in Sources */,
+				A2180D51C481C6237FE10250FFE0D188 /* SRKSyncObject.m in Sources */,
+				603EEFA9137F024C1A3E82E1490784A8 /* SRKSyncOptions.m in Sources */,
+				71DB6314F891BE55E84ABE6204B57D86 /* SRKSyncRegisteredClass.m in Sources */,
+				F1ECF2E3DF6EF2C4BD4BAAA5978620D3 /* SRKTransaction.m in Sources */,
+				641FB944457B7F82B179071A1AD66F1D /* SRKTransactionInfo.m in Sources */,
+				06DE9EB89CE338CC6C49F2F48DEA323B /* SRKUnsupportedObject.m in Sources */,
+				92F1252639FEC4A2469B1348F6CC59B7 /* SRKUtilities.m in Sources */,
+				67157C0FC070A89042658EDD1628CEA0 /* SyncComms.m in Sources */,
+				9483BFA4706E1046FA5DF91F599019F7 /* SyncNetwork.m in Sources */,
+				41983214409C4B3D9D01970B78D60415 /* SyncRequest.m in Sources */,
+				9B11791333E6E4919450F49C5633AE6B /* SyncService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74A67FCED3C447B046732C859D1718F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EA7AE3A5AC2A6E6372BC043989E7A7A /* Pods-OSC-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1C8B029F600160149A2404C342F6E50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E3538A6992A38276764936A9733493D /* AFError.swift in Sources */,
+				772911DA6E33D1CBBC30131B7C8BDBB3 /* Alamofire-dummy.m in Sources */,
+				0A39AF55285A3A4F7CBABB6D822FA4A3 /* Alamofire.swift in Sources */,
+				3E0749AF6C51BCF0E4A41CF1D6A76FED /* DispatchQueue+Alamofire.swift in Sources */,
+				AEA829AB1A8AF2AD077A808AED6B178A /* MultipartFormData.swift in Sources */,
+				73AB05789A4982944AF68DBD013E3EB7 /* NetworkReachabilityManager.swift in Sources */,
+				1D29D2ACADF961F69D32B06FA6A09E28 /* Notifications.swift in Sources */,
+				700D3D95AF9520CB227846DFD943A2DA /* ParameterEncoding.swift in Sources */,
+				355C18EEC82624A06A6CC93965258E33 /* Request.swift in Sources */,
+				059D92B7BBFBEC53E9A3B6E11C5C3B3A /* Response.swift in Sources */,
+				6EFD003458AE7F689DEA720A2030C261 /* ResponseSerialization.swift in Sources */,
+				EB0DD8CEA1A69867A30267439C970440 /* Result.swift in Sources */,
+				8D2A6A90A6DDAF75EA52D471258545CC /* ServerTrustPolicy.swift in Sources */,
+				A1EC41966B261DCE460BCDE5124A1DBE /* SessionDelegate.swift in Sources */,
+				D3FA0AA634AAEA99AB3FABC36BB4958C /* SessionManager.swift in Sources */,
+				77E8F0EB9FFBE2E3EB0C77095C644606 /* TaskDelegate.swift in Sources */,
+				60B6C2A003864AAD3A426448152F67BE /* Timeline.swift in Sources */,
+				AA56769D8733D3F3E7976742D5ABA998 /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0A2819D1134FEE8190FDA95ACE1B1559 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 3383968E74B5371B20BB519B170DC7FD /* Alamofire */;
+			targetProxy = 36CA1B260A205926FBEBFA26881C843D /* PBXContainerItemProxy */;
+		};
+		CD7856D2B607275D469B8773EE28DC14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SharkORM;
+			target = 61AB498995B1F22A8C3D0A89D3A50D37 /* SharkORM */;
+			targetProxy = 315FAEC637C138F639753EE3B7D74658 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		533220A7363132F85843031FA4F2AAAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EA5981869A98DC1BF12422C40B5E9FF /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		673302205985A4AE94A52DE056940955 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C56F7A5840A3F7F305E10168C976A764 /* Pods-OSC.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OSC/Pods-OSC-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OSC/Pods-OSC.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6F1E0FBD188DB2B5395FF2BF6613BE5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86DD4544AD7DB4650C4D8563DD1A879E /* SharkORM.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SharkORM/SharkORM-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SharkORM/SharkORM-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SharkORM/SharkORM.modulemap";
+				PRODUCT_MODULE_NAME = SharkORM;
+				PRODUCT_NAME = SharkORM;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8293410AD2E21DD06C9E7D4342D86F84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86DD4544AD7DB4650C4D8563DD1A879E /* SharkORM.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SharkORM/SharkORM-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SharkORM/SharkORM-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SharkORM/SharkORM.modulemap";
+				PRODUCT_MODULE_NAME = SharkORM;
+				PRODUCT_NAME = SharkORM;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9838C58BD1AA67DBD29475983CB12D4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EA5981869A98DC1BF12422C40B5E9FF /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9A35BA2FA7B3BAD85C32B53854E1CFEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DA6D80144B8DFAF23272011D8A48ED5 /* Pods-OSC.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OSC/Pods-OSC-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OSC/Pods-OSC.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B91122EE28A3285868B2D027F31D4C1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E192E17ED25EF742572D2228559A457D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B91122EE28A3285868B2D027F31D4C1C /* Debug */,
+				E192E17ED25EF742572D2228559A457D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E87124444A44B7DB55208E7FEC21D331 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				533220A7363132F85843031FA4F2AAAB /* Debug */,
+				9838C58BD1AA67DBD29475983CB12D4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC25F6C849A2B4F0711A657EA1107F05 /* Build configuration list for PBXNativeTarget "SharkORM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8293410AD2E21DD06C9E7D4342D86F84 /* Debug */,
+				6F1E0FBD188DB2B5395FF2BF6613BE5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4770623EBC16918FAA4082414EF5C59 /* Build configuration list for PBXNativeTarget "Pods-OSC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A35BA2FA7B3BAD85C32B53854E1CFEB /* Debug */,
+				673302205985A4AE94A52DE056940955 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
