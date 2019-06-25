@@ -10,11 +10,18 @@
 //  see http://clean-swift.com
 //
 
+import Alamofire
 import UIKit
 
-class CategoryWorker
-{
-  func doSomeWork()
-  {
-  }
+class CategoryWorker: BaseWorker {
+    func doGetCategoryList(completion: @escaping (Category.List.Response?, Error?) -> Void) {
+        Alamofire.request(Config().endpoint + "/category", method: .get, headers: getHeader()).debugLog().responseJSON { response in
+            do {
+                let categoryStruct = try JSONDecoder().decode(Category.List.Response.self, from: response.data!)
+                completion(categoryStruct, nil)
+            } catch let err {
+                completion(nil, err)
+            }
+        }
+    }
 }

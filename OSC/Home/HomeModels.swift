@@ -12,30 +12,25 @@
 
 import UIKit
 
-enum Home
-{
-  // MARK: Use cases
-  
-  enum Data
-  {
-    struct Request
-    {
+enum Home {
+    // MARK: Use cases
+
+    enum List {
+        struct Request {}
+
+        struct Data: Decodable {
+            var id: String
+            var name: String
+        }
+
+        struct Response: Decodable {
+            var code: Int32
+            var message: String
+            var data: [Data]
+        }
+
+        struct ViewModel {
+            var data: [Data]
+        }
     }
-    
-    struct Data: Decodable {
-        var id: String
-        var name: String
-    }
-    
-    struct Response: Decodable
-    {
-        var code: Int32
-        var message: String
-        var data: [Data]
-    }
-    struct ViewModel
-    {
-        var data: [Data]
-    }
-  }
 }

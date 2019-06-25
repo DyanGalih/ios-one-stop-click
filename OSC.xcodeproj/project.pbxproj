@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -47,6 +47,15 @@
 		632CD3BF229BBDFD00E9D352 /* CategoryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632CD3B9229BBDFD00E9D352 /* CategoryModels.swift */; };
 		632CD3C0229BBDFD00E9D352 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632CD3BA229BBDFD00E9D352 /* CategoryViewController.swift */; };
 		632CD3C1229BBDFD00E9D352 /* CategoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632CD3BB229BBDFD00E9D352 /* CategoryInteractor.swift */; };
+		6332D73022C1F65E0077EEF7 /* ProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6332D72A22C1F65E0077EEF7 /* ProductPresenter.swift */; };
+		6332D73122C1F65E0077EEF7 /* ProductWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6332D72B22C1F65E0077EEF7 /* ProductWorker.swift */; };
+		6332D73222C1F65E0077EEF7 /* ProductRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6332D72C22C1F65E0077EEF7 /* ProductRouter.swift */; };
+		6332D73322C1F65E0077EEF7 /* ProductModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6332D72D22C1F65E0077EEF7 /* ProductModels.swift */; };
+		6332D73422C1F65E0077EEF7 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6332D72E22C1F65E0077EEF7 /* ProductViewController.swift */; };
+		6332D73522C1F65E0077EEF7 /* ProductInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6332D72F22C1F65E0077EEF7 /* ProductInteractor.swift */; };
+		6332D73822C216A00077EEF7 /* BaseWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6332D73722C216A00077EEF7 /* BaseWorker.swift */; };
+		6338FA7B22BC8E8800C1A29C /* ClientAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6338FA7A22BC8E8800C1A29C /* ClientAuth.swift */; };
+		63697B4122B88C4700BC2523 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63697B4022B88C4700BC2523 /* Util.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +123,15 @@
 		632CD3B9229BBDFD00E9D352 /* CategoryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModels.swift; sourceTree = "<group>"; };
 		632CD3BA229BBDFD00E9D352 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		632CD3BB229BBDFD00E9D352 /* CategoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryInteractor.swift; sourceTree = "<group>"; };
+		6332D72A22C1F65E0077EEF7 /* ProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresenter.swift; sourceTree = "<group>"; };
+		6332D72B22C1F65E0077EEF7 /* ProductWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductWorker.swift; sourceTree = "<group>"; };
+		6332D72C22C1F65E0077EEF7 /* ProductRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRouter.swift; sourceTree = "<group>"; };
+		6332D72D22C1F65E0077EEF7 /* ProductModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModels.swift; sourceTree = "<group>"; };
+		6332D72E22C1F65E0077EEF7 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		6332D72F22C1F65E0077EEF7 /* ProductInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInteractor.swift; sourceTree = "<group>"; };
+		6332D73722C216A00077EEF7 /* BaseWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWorker.swift; sourceTree = "<group>"; };
+		6338FA7A22BC8E8800C1A29C /* ClientAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientAuth.swift; sourceTree = "<group>"; };
+		63697B4022B88C4700BC2523 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		6A5E7AD31306950BADFD1882 /* Pods_OSC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OSC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -210,6 +228,10 @@
 		5EABF90022700065007FE532 /* OSC */ = {
 			isa = PBXGroup;
 			children = (
+				6332D73622C2168E0077EEF7 /* Base */,
+				6332D72922C1F4AA0077EEF7 /* Product */,
+				6338FA7922BC8E4000C1A29C /* Auth */,
+				63697B3F22B88C2300BC2523 /* Util */,
 				632CD3B5229BBB4200E9D352 /* Category */,
 				5E1ECD84228A628800327B2F /* ForgotPassword */,
 				5E7CFAB022893F4D000A2C53 /* CoreData */,
@@ -282,6 +304,43 @@
 				632CD3BB229BBDFD00E9D352 /* CategoryInteractor.swift */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		6332D72922C1F4AA0077EEF7 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				6332D72A22C1F65E0077EEF7 /* ProductPresenter.swift */,
+				6332D72B22C1F65E0077EEF7 /* ProductWorker.swift */,
+				6332D72C22C1F65E0077EEF7 /* ProductRouter.swift */,
+				6332D72D22C1F65E0077EEF7 /* ProductModels.swift */,
+				6332D72E22C1F65E0077EEF7 /* ProductViewController.swift */,
+				6332D72F22C1F65E0077EEF7 /* ProductInteractor.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		6332D73622C2168E0077EEF7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6332D73722C216A00077EEF7 /* BaseWorker.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		6338FA7922BC8E4000C1A29C /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				6338FA7A22BC8E8800C1A29C /* ClientAuth.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		63697B3F22B88C2300BC2523 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				63697B4022B88C4700BC2523 /* Util.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		7E89ADF0F6BB0A86920BB667 /* Frameworks */ = {
@@ -436,18 +495,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OSC/Pods-OSC-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/SharkORM/SharkORM.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-OSC/Pods-OSC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SharkORM.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-OSC/Pods-OSC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -484,6 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EB96C4A228129DC00786655 /* LoginInteractor.swift in Sources */,
+				6332D73822C216A00077EEF7 /* BaseWorker.swift in Sources */,
 				5E1ECD8E228A62A300327B2F /* ForgotPasswordModels.swift in Sources */,
 				5E1ECD8B228A62A300327B2F /* ForgotPasswordPresenter.swift in Sources */,
 				5EB96C56228129F600786655 /* RegisterViewController.swift in Sources */,
@@ -493,6 +546,7 @@
 				5E7CFA9B22891295000A2C53 /* HomePresenter.swift in Sources */,
 				5EB96C45228129DC00786655 /* LoginPresenter.swift in Sources */,
 				5EB96C55228129F600786655 /* RegisterModels.swift in Sources */,
+				6332D73522C1F65E0077EEF7 /* ProductInteractor.swift in Sources */,
 				5EB96C53228129F600786655 /* RegisterWorker.swift in Sources */,
 				5EB96C46228129DC00786655 /* LoginWorker.swift in Sources */,
 				5E7CFA9D22891295000A2C53 /* HomeRouter.swift in Sources */,
@@ -501,11 +555,16 @@
 				5E7CFAAF2289260D000A2C53 /* TabViewController.swift in Sources */,
 				632CD3BC229BBDFD00E9D352 /* CategoryPresenter.swift in Sources */,
 				632CD3BF229BBDFD00E9D352 /* CategoryModels.swift in Sources */,
+				6332D73022C1F65E0077EEF7 /* ProductPresenter.swift in Sources */,
+				6332D73322C1F65E0077EEF7 /* ProductModels.swift in Sources */,
+				6332D73222C1F65E0077EEF7 /* ProductRouter.swift in Sources */,
 				5E7CFA9E22891295000A2C53 /* HomeModels.swift in Sources */,
 				5E324207227A8B5900DDBA2F /* Config.swift in Sources */,
+				6332D73122C1F65E0077EEF7 /* ProductWorker.swift in Sources */,
 				5E7CFAB622893FB8000A2C53 /* osc.xcdatamodeld in Sources */,
 				5E1ECD8D228A62A300327B2F /* ForgotPasswordRouter.swift in Sources */,
 				5EABF90222700065007FE532 /* AppDelegate.swift in Sources */,
+				6332D73422C1F65E0077EEF7 /* ProductViewController.swift in Sources */,
 				632CD3BD229BBDFD00E9D352 /* CategoryWorker.swift in Sources */,
 				5EB96C52228129F600786655 /* RegisterPresenter.swift in Sources */,
 				5E1ECD8C228A62A300327B2F /* ForgotPasswordWorker.swift in Sources */,
@@ -515,8 +574,10 @@
 				5EB96C47228129DC00786655 /* LoginRouter.swift in Sources */,
 				632CD3C1229BBDFD00E9D352 /* CategoryInteractor.swift in Sources */,
 				5E7CFA9C22891295000A2C53 /* HomeWorker.swift in Sources */,
+				63697B4122B88C4700BC2523 /* Util.swift in Sources */,
 				632CD3C0229BBDFD00E9D352 /* CategoryViewController.swift in Sources */,
 				5EB96C57228129F600786655 /* RegisterInteractor.swift in Sources */,
+				6338FA7B22BC8E8800C1A29C /* ClientAuth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -735,11 +796,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97N657WJ94;
 				INFOPLIST_FILE = OSCTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /usr/lib/swift;
 				PRODUCT_BUNDLE_IDENTIFIER = com.webappid.OSCTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -756,11 +819,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97N657WJ94;
 				INFOPLIST_FILE = OSCTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /usr/lib/swift;
 				PRODUCT_BUNDLE_IDENTIFIER = com.webappid.OSCTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -776,10 +841,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97N657WJ94;
 				INFOPLIST_FILE = OSCUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+					/usr/lib/swift,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.webappid.OSCUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -796,10 +863,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97N657WJ94;
 				INFOPLIST_FILE = OSCUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+					/usr/lib/swift,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.webappid.OSCUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -12,25 +12,21 @@
 
 import UIKit
 
-@objc protocol RegisterRoutingLogic
-{
+@objc protocol RegisterRoutingLogic {
     func routeToLogin(segue: UIStoryboardSegue?)
 }
 
-protocol RegisterDataPassing
-{
+protocol RegisterDataPassing {
     var dataStore: RegisterDataStore? { get }
 }
 
-class RegisterRouter: NSObject, RegisterRoutingLogic, RegisterDataPassing
-{
+class RegisterRouter: NSObject, RegisterRoutingLogic, RegisterDataPassing {
     weak var viewController: RegisterViewController?
     var dataStore: RegisterDataStore?
-    
+
     // MARK: Routing
-    
-    func routeToLogin(segue: UIStoryboardSegue?)
-    {
+
+    func routeToLogin(segue: UIStoryboardSegue?) {
         if let segue = segue {
             _ = segue.destination as! LoginViewController
         } else {
@@ -39,19 +35,18 @@ class RegisterRouter: NSObject, RegisterRoutingLogic, RegisterDataPassing
             navigateToLogin(source: viewController!, destination: destinationVC)
         }
     }
-    
+
     // MARK: Navigation
-    
-    func navigateToLogin(source: RegisterViewController, destination: LoginViewController)
-    {
+
+    func navigateToLogin(source: RegisterViewController, destination: LoginViewController) {
         source.show(destination, sender: nil)
         source.dismiss(animated: false, completion: nil)
     }
-    
+
     // MARK: Passing data
-    
-    //func passDataToSomewhere(source: RegisterDataStore, destination: inout SomewhereDataStore)
-    //{
+
+    // func passDataToSomewhere(source: RegisterDataStore, destination: inout SomewhereDataStore)
+    // {
     //  destination.name = source.name
-    //}
+    // }
 }

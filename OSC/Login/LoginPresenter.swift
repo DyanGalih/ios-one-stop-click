@@ -12,21 +12,18 @@
 
 import UIKit
 
-protocol LoginPresentationLogic
-{
+protocol LoginPresentationLogic {
     func presentFailedLogin(title: String, message: String)
     func presentSuccessLogin()
 }
 
-class LoginPresenter: LoginPresentationLogic
-{
- 
+class LoginPresenter: LoginPresentationLogic {
     weak var viewController: LoginDisplayLogic?
-    
+
     func presentFailedLogin(title: String, message: String) {
         viewController?.showLoginAlert(tilte: title, message: message)
     }
-    
+
     func presentSuccessLogin() {
         viewController?.showSuccessLogin()
     }

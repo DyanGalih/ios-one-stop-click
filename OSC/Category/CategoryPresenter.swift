@@ -12,20 +12,20 @@
 
 import UIKit
 
-protocol CategoryPresentationLogic
-{
-  func presentSomething(response: Category.Something.Response)
+protocol CategoryPresentationLogic {
+    func presentCategoryList(response: Category.List.Response)
+    func presentAlert(message: String)
 }
 
-class CategoryPresenter: CategoryPresentationLogic
-{
-  weak var viewController: CategoryDisplayLogic?
-  
-  // MARK: Do something
-  
-  func presentSomething(response: Category.Something.Response)
-  {
-    let viewModel = Category.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
-  }
+class CategoryPresenter: CategoryPresentationLogic {
+    weak var viewController: CategoryDisplayLogic?
+
+    func presentCategoryList(response: Category.List.Response) {
+        let viewModel = Category.List.ViewModel(data: response.data)
+        viewController?.displayCategoryList(viewModel: viewModel)
+    }
+
+    func presentAlert(message: String) {
+        viewController?.displayAlert(title: "Category List", message: message)
+    }
 }

@@ -12,58 +12,56 @@
 
 import UIKit
 
-enum Login
-{
+enum Login {
     // MARK: Use cases
-    
-    enum User
-    {
-        struct Request
-        {
+
+    enum User {
+        struct Request {
             var email: String
             var password: String
+
             init(email: String, password: String) {
                 self.email = email
                 self.password = password
             }
         }
-        struct Response
-        {
-        }
-        
-        struct LoginResponse: Decodable{
+
+        struct Response {}
+
+        struct LoginResponse: Decodable {
             var code: Int32
             var message: String
-            
-            struct Data:Decodable{
+
+            struct Data: Decodable {
                 struct User: Decodable {
                     var id: Int32
                     var email: String
                     var password: String
                     var firstname: String
                     var lastname: String
-                    struct CreatedAt: Decodable{
+
+                    struct CreatedAt: Decodable {
                         var Time: String
                         var Valid: Bool
                     }
-                    var created_at:CreatedAt
-                    
-                    struct UpdatedAt:Decodable {
+
+                    var created_at: CreatedAt
+
+                    struct UpdatedAt: Decodable {
                         var Time: String
                         var Valid: Bool
                     }
+
                     var updated_at: UpdatedAt
                 }
+
                 var user: User
                 var token: String
             }
+
             var data: Data
         }
-        
-        
-        
-        struct ViewModel
-        {
-        }
+
+        struct ViewModel {}
     }
 }

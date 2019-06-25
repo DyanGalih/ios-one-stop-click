@@ -12,19 +12,17 @@
 
 import UIKit
 
-enum Register
-{
+enum Register {
     // MARK: Use cases
-    
-    enum NewUser
-    {
-        struct Request
-        {
+
+    enum NewUser {
+        struct Request {
             var firstname: String
             var email: String
             var lastname: String
             var password: String
             var password_confirmation: String
+
             init(firstname: String, lastname: String, email: String, password: String, password_confirmation: String) {
                 self.firstname = firstname
                 self.lastname = lastname
@@ -33,15 +31,13 @@ enum Register
                 self.password_confirmation = password_confirmation
             }
         }
-        struct Response:Decodable
-            
-        {
+
+        struct Response: Decodable {
             var code: Int32
             var data: [String]
             var message: String
         }
-        struct ViewModel
-        {
-        }
+
+        struct ViewModel {}
     }
 }

@@ -12,36 +12,33 @@
 
 import UIKit
 
-protocol ForgotPasswordDisplayLogic: class
-{
-    func displayMessage(title:String, message: String)
+protocol ForgotPasswordDisplayLogic: class {
+    func displayMessage(title: String, message: String)
 }
 
-class ForgotPasswordViewController: UIViewController, ForgotPasswordDisplayLogic
-{
+class ForgotPasswordViewController: UIViewController, ForgotPasswordDisplayLogic {
+    
+
     var interactor: ForgotPasswordBusinessLogic?
     var router: (NSObjectProtocol & ForgotPasswordRoutingLogic & ForgotPasswordDataPassing)?
-    
-    @IBOutlet weak var emailTxt: UITextField!
-    
+
+    @IBOutlet var emailTxt: UITextField!
+
     // MARK: Object lifecycle
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
-    {
+
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
     }
-    
-    required init?(coder aDecoder: NSCoder)
-    {
+
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
-    
+
     // MARK: Setup
-    
-    private func setup()
-    {
+
+    private func setup() {
         let viewController = self
         let interactor = ForgotPasswordInteractor()
         let presenter = ForgotPasswordPresenter()
@@ -53,11 +50,10 @@ class ForgotPasswordViewController: UIViewController, ForgotPasswordDisplayLogic
         router.viewController = viewController
         router.dataStore = interactor
     }
-    
+
     // MARK: Routing
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let scene = segue.identifier {
             let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
             if let router = router, router.responds(to: selector) {
@@ -65,36 +61,28 @@ class ForgotPasswordViewController: UIViewController, ForgotPasswordDisplayLogic
             }
         }
     }
-    
+
     // MARK: View lifecycle
-    
-    override func viewDidLoad()
-    {
+
+    override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     // MARK: Do something
-    
-    //@IBOutlet weak var nameTextField: UITextField!
-    
-    func doReqForgotPassword(email: String)
-    {
-        let request = ForgotPassword.Forgot.Request(email: email)
+
+    // @IBOutlet weak var nameTextField: UITextField!
+
+    func doReqForgotPassword(email: String) {
+        let request = ForgotPassword.Submit.Request(email: email)
         interactor?.doForgotPassword(request: request)
     }
-    
-    func displayMessage(title: String, message: String)
-    {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert);
-        
-        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil);
-        alert.addAction(okAction);
-        present(alert, animated: true, completion: nil)
+
+    func displayMessage(title: String, message: String) {
+        self.showAlert(title: title, message: message, handler: nil)
     }
-    
+
     @IBAction func submitBtn(_ sender: UIButton) {
         let email: String = emailTxt.text!
-        self.doReqForgotPassword(email: email)
+        doReqForgotPassword(email: email)
     }
-    
 }

@@ -12,35 +12,31 @@
 
 import UIKit
 
-protocol HomeDisplayLogic: class
-{
-    func displayHomeList(viewModel: Home.Data.ViewModel)
+protocol HomeDisplayLogic: class {
+    func displayHomeList(viewModel: Home.List.ViewModel)
 }
 
-class HomeViewController: UITableViewController, HomeDisplayLogic
-{
+class HomeViewController: UITableViewController, HomeDisplayLogic {
     var interactor: HomeBusinessLogic?
     var router: (NSObjectProtocol & HomeRoutingLogic & HomeDataPassing)?
-    
-    var homeList: [Home.Data.Data] = []
-    
+
+    var homeList: [Home.List.Data] = []
+
     // MARK: Object lifecycle
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
-    {
+
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
     }
-    
-    required init?(coder aDecoder: NSCoder)
-    {
+
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
-    
+
     // MARK: Setup
-    
-    private func setup()
-    {
+
+    private func setup() {
         let viewController = self
         let interactor = HomeInteractor()
         let presenter = HomePresenter()
@@ -52,11 +48,10 @@ class HomeViewController: UITableViewController, HomeDisplayLogic
         router.viewController = viewController
         router.dataStore = interactor
     }
-    
+
     // MARK: Routing
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let scene = segue.identifier {
             let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
             if let router = router, router.responds(to: selector) {
@@ -64,49 +59,37 @@ class HomeViewController: UITableViewController, HomeDisplayLogic
             }
         }
     }
-    
+
     // MARK: View lifecycle
-    
-    override func viewDidLoad()
-    {
+
+    override func viewDidLoad() {
         super.viewDidLoad()
         doGetHomeData()
     }
-    
+
     // MARK: Do something
-    
-    //@IBOutlet weak var nameTextField: UITextField!
-    
-    func doGetHomeData()
-    {
-        let request = Home.Data.Request()
+
+    // @IBOutlet weak var nameTextField: UITextField!
+
+    func doGetHomeData() {
+        let request = Home.List.Request()
         interactor?.doGetHomeData(request: request)
     }
-    
-    func displayHomeList(viewModel: Home.Data.ViewModel)
-    {
+
+    func displayHomeList(viewModel: Home.List.ViewModel) {
         homeList = viewModel.data
         tableView.reloadData()
     }
-    
-    override func numberOfSections(in tableView: UITableView) -> Int
-    {
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
-//        if homeList.count == 0{
-//            return 0
-//        }else{
-//            return 1
-//        }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return homeList.count
     }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
-    
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let list = homeList[indexPath.row]
         var cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell")
         if cell == nil {

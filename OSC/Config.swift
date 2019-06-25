@@ -8,6 +8,6 @@
 
 import Foundation
 
-class Config{
+class Config {
     let endpoint = "https://goosc.herokuapp.com";
 }

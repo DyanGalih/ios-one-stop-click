@@ -12,25 +12,22 @@
 
 import UIKit
 
-protocol ForgotPasswordPresentationLogic
-{
+protocol ForgotPasswordPresentationLogic {
     func presentSucessForgotPassword()
     func presentFailedReqForgotPassword()
 }
 
-class ForgotPasswordPresenter: ForgotPasswordPresentationLogic
-{
+class ForgotPasswordPresenter: ForgotPasswordPresentationLogic {
     func presentFailedReqForgotPassword() {
         viewController?.displayMessage(title: "Request Failed", message: "Request Reset Password Failed, please contact adminstrator")
     }
-    
+
     weak var viewController: ForgotPasswordDisplayLogic?
-    
+
     // MARK: Do something
-    
-    func presentSucessForgotPassword()
-    {
-        let viewModel = ForgotPassword.Forgot.ViewModel()
+
+    func presentSucessForgotPassword() {
+        //let viewModel = ForgotPassword.Submit.ViewModel()
         viewController?.displayMessage(title: "Request Success", message: "Request Reset Password Success, Please Check Your Email")
     }
 }

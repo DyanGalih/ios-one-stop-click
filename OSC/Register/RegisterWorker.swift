@@ -10,29 +10,27 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
 import Alamofire
+import UIKit
 
-class RegisterWorker
-{
-    func doRegister(request: Register.NewUser.Request, completion:@escaping (Register.NewUser.Response?, Error?)-> Void)
-    {
+class RegisterWorker {
+    func doRegister(request: Register.NewUser.Request, completion: @escaping (Register.NewUser.Response?, Error?) -> Void) {
         let parameters = [
             "firstname": request.firstname,
             "lastname": request.lastname,
             "email": request.email,
             "password": request.password
         ]
-        
-        Alamofire.request(Config().endpoint + "/registration", method: .post, parameters: parameters as Parameters, encoding: JSONEncoding.default).debugLog().responseJSON{ response in
-            do{
+
+        Alamofire.request(Config().endpoint + "/registration", method: .post, parameters: parameters as Parameters, encoding: JSONEncoding.default).debugLog().responseJSON { response in
+            do {
                 let registerStruct = try JSONDecoder().decode(Register.NewUser.Response.self, from: response.data!)
-                if registerStruct.code == 201{
+                if registerStruct.code == 201 {
                     completion(registerStruct, nil)
-                }else{
+                } else {
                     completion(nil, nil)
                 }
-            }catch let err{
+            } catch let err {
                 completion(nil, err)
             }
         }

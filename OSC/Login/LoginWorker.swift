@@ -10,40 +10,38 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
 import Alamofire
 import CoreData
+import UIKit
 
-class LoginWorker
-{
-    func doLogin(request: Login.User.Request, completion:@escaping (Login.User.LoginResponse?, Error?) -> Void)
-    {
+class LoginWorker {
+    func doLogin(request: Login.User.Request, completion: @escaping (Login.User.LoginResponse?, Error?) -> Void) {
         let parameters = [
             "email": request.email,
             "password": request.password
         ]
-        
-        Alamofire.request(Config().endpoint + "/auth", method: .post, parameters: parameters, encoding: JSONEncoding.default).debugLog().responseJSON{ response in
-            do{
+
+        Alamofire.request(Config().endpoint + "/auth", method: .post, parameters: parameters, encoding: JSONEncoding.default).debugLog().responseJSON { response in
+            do {
                 let loginStruct = try JSONDecoder().decode(Login.User.LoginResponse.self, from: response.data!)
-                if(loginStruct.code == 200){
-                    completion(loginStruct, nil);
-                }else{
+                if loginStruct.code == 200 {
+                    completion(loginStruct, nil)
+                } else {
                     completion(nil, nil)
                 }
-            }catch let err{
+            } catch let err {
                 completion(nil, err)
             }
         }
     }
-    
-    func doStoreAuth(response: Login.User.LoginResponse, completion: @escaping(Bool?) -> Void){
+
+    func doStoreAuth(response: Login.User.LoginResponse, completion: @escaping (Bool?) -> Void) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Auth")
-        //request.predicate = NSPredicate(format: "age = %@", "12")
+        // request.predicate = NSPredicate(format: "age = %@", "12")
         request.returnsObjectsAsFaults = false
-        
+
         do {
             let result = try context.fetch(request)
             for data in result as! [NSManagedObject] {
@@ -52,15 +50,15 @@ class LoginWorker
         } catch {
             print("Failed")
         }
-        
+
         let entity = NSEntityDescription.entity(forEntityName: "Auth", in: context)
         let auth = NSManagedObject(entity: entity!, insertInto: context)
-       
+
         auth.setValue(response.data.user.email, forKey: "email")
         auth.setValue(response.data.user.firstname, forKey: "first_name")
         auth.setValue(response.data.user.lastname, forKey: "last_name")
         auth.setValue(response.data.token, forKey: "token")
-        
+
         do {
             try context.save()
             completion(true)

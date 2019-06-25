@@ -10,54 +10,50 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
 import Alamofire
+import UIKit
 
-protocol LoginBusinessLogic
-{
+protocol LoginBusinessLogic {
     func doLogin(request: Login.User.Request)
 }
 
-protocol LoginDataStore
-{
+protocol LoginDataStore {
     var name: String { get set }
 }
 
-class LoginInteractor: LoginBusinessLogic, LoginDataStore
-{
+class LoginInteractor: LoginBusinessLogic, LoginDataStore {
     var presenter: LoginPresentationLogic?
     var worker: LoginWorker?
     var name: String = ""
-    
+
     // MARK: Do something
-    
-    func doLogin(request: Login.User.Request)
-    {
+
+    func doLogin(request: Login.User.Request) {
         var message: String = ""
         var error: Bool = false
-        if request.email.isEmpty{
+        if request.email.isEmpty {
             error = true
             message = "Please input your email"
-        }else if request.password.isEmpty{
+        } else if request.password.isEmpty {
             error = true
             message = "Please input your password"
         }
-        
-        if(error){
+
+        if error {
             presenter?.presentFailedLogin(title: "Login Failed", message: message)
-        }else{
+        } else {
             worker = LoginWorker()
-            worker?.doLogin(request: request, completion: { (data, err) in
-                if data != nil{
-                    self.worker?.doStoreAuth(response: data!, completion:{(bool) in
-                        if(bool!){
+            worker?.doLogin(request: request, completion: { data, _ in
+                if data != nil {
+                    self.worker?.doStoreAuth(response: data!, completion: { bool in
+                        if bool! {
                             self.presenter?.presentSuccessLogin()
-                        }else{
+                        } else {
                             self.presenter?.presentFailedLogin(title: "Login Failed", message: "Contact your administrator")
                         }
                     })
-                    
-                }else{
+
+                } else {
                     self.presenter?.presentFailedLogin(title: "Login Failed", message: "Please check your email or password")
                 }
             })

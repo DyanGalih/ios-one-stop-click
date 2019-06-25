@@ -14,28 +14,35 @@ import UIKit
 
 protocol CategoryBusinessLogic
 {
-  func doSomething(request: Category.Something.Request)
+    func doGetCategoryList(request: Category.List.Request)
 }
 
 protocol CategoryDataStore
 {
-  //var name: String { get set }
+    // var name: String { get set }
 }
 
 class CategoryInteractor: CategoryBusinessLogic, CategoryDataStore
 {
-  var presenter: CategoryPresentationLogic?
-  var worker: CategoryWorker?
-  //var name: String = ""
-  
-  // MARK: Do something
-  
-  func doSomething(request: Category.Something.Request)
-  {
-    worker = CategoryWorker()
-    worker?.doSomeWork()
-    
-    let response = Category.Something.Response()
-    presenter?.presentSomething(response: response)
-  }
+    var presenter: CategoryPresentationLogic?
+    var worker: CategoryWorker?
+    // var name: String = ""
+
+    // MARK: Do something
+
+    func doGetCategoryList(request: Category.List.Request)
+    {
+        worker = CategoryWorker()
+        worker?.doGetCategoryList(completion: { (data, _) -> Void in
+            if data != nil
+            {
+                let response: Category.List.Response = data!
+                self.presenter?.presentCategoryList(response: response)
+            }
+            else
+            {
+                self.presenter?.presentAlert(message: "Data Not Found")
+            }
+        })
+    }
 }

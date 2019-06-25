@@ -10,19 +10,17 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
 import Alamofire
+import UIKit
 
-class HomeWorker
-{
-    func doGetHomeData(completion:@escaping (Home.Data.Response?, Error?) -> Void)
-    {
-        Alamofire.request(Config().endpoint + "/homepage", method: .get).debugLog().responseJSON{
+class HomeWorker {
+    func doGetHomeData(completion: @escaping (Home.List.Response?, Error?) -> Void) {
+        Alamofire.request(Config().endpoint + "/homepage", method: .get).debugLog().responseJSON {
             response in
-            do{
-                let homeStruct = try JSONDecoder().decode(Home.Data.Response.self, from: response.data!)
+            do {
+                let homeStruct = try JSONDecoder().decode(Home.List.Response.self, from: response.data!)
                 completion(homeStruct, nil)
-            }catch let err{
+            } catch let err {
                 completion(nil, err)
             }
         }

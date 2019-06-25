@@ -12,23 +12,20 @@
 
 import UIKit
 
-protocol RegisterPresentationLogic
-{
+protocol RegisterPresentationLogic {
     func presentRegisterSuccess()
     func presentRegisterFailed(title: String, message: String)
 }
 
-class RegisterPresenter: RegisterPresentationLogic
-{
+class RegisterPresenter: RegisterPresentationLogic {
     weak var viewController: RegisterDisplayLogic?
-    
+
     // MARK: Do something
-    
-    func presentRegisterSuccess()
-    {
+
+    func presentRegisterSuccess() {
         viewController?.displaySuccessRegister()
     }
-    
+
     func presentRegisterFailed(title: String, message: String) {
         viewController?.displayRegisterFailed(title: title, message: message)
     }

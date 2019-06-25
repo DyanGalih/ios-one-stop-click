@@ -12,27 +12,24 @@
 
 import UIKit
 
-enum ForgotPassword
-{
+enum ForgotPassword {
     // MARK: Use cases
-    
-    enum Forgot
-    {
-        struct Request
-        {
+
+    enum Submit {
+        struct Request {
             var email: String
-            init(email: String){
+
+            init(email: String) {
                 self.email = email
             }
         }
-        struct Response: Decodable
-        {
+
+        struct Response: Decodable {
             var code: Int32
             var data: [String]
             var message: String
         }
-        struct ViewModel
-        {
-        }
+
+        struct ViewModel {}
     }
 }

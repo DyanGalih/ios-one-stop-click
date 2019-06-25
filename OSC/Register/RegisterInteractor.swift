@@ -11,82 +11,57 @@
 //
 
 import UIKit
-import Alamofire
 
-protocol RegisterBusinessLogic
-{
+protocol RegisterBusinessLogic {
     func doRegister(request: Register.NewUser.Request)
-    
 }
 
-protocol RegisterDataStore
-{
+protocol RegisterDataStore {
     var name: String { get set }
     var email: String { get set }
     var password: String { get set }
     var password_confirmation: String { get set }
 }
 
-extension Request {
-    public func debugLog() -> Self {
-        #if DEBUG
-        debugPrint(self)
-        #endif
-        return self
-    }
-}
-
-class RegisterInteractor: RegisterBusinessLogic, RegisterDataStore
-{
+class RegisterInteractor: RegisterBusinessLogic, RegisterDataStore {
     var email: String = ""
-    
+
     var password: String = ""
-    
+
     var name: String = ""
-    
+
     var password_confirmation: String = ""
-    
+
     var presenter: RegisterPresentationLogic?
     var worker: RegisterWorker?
-    //var name: String = ""
-    
+    // var name: String = ""
+
     // MARK: Do something
-    
-    func doRegister(request: Register.NewUser.Request)
-    {
+
+    func doRegister(request: Register.NewUser.Request) {
         var errorMessage = ""
         var error = false
-        if request.firstname.isEmpty{
+        if request.firstname.isEmpty {
             errorMessage = "Name can't be empty"
             error = true
-        } else
-            
-            if request.lastname.isEmpty{
-                
-            }else
-                
-                if request.email.isEmpty{
-                    errorMessage = "Email can't be empty"
-                    error = true
-                } else
-                    
-                    if request.password.isEmpty{
-                        errorMessage = "Pin can't be empty"
-                        error = true
-                    } else
-                        
-                        if request.password_confirmation.isEmpty{
-                            errorMessage = "Pin confirmation can't be empty"
-                            error = true
+        } else if request.lastname.isEmpty {} else if request.email.isEmpty {
+            errorMessage = "Email can't be empty"
+            error = true
+        } else if request.password.isEmpty {
+            errorMessage = "Pin can't be empty"
+            error = true
+        } else if request.password_confirmation.isEmpty {
+            errorMessage = "Pin confirmation can't be empty"
+            error = true
         }
-        if(error){
-            self.presenter?.presentRegisterFailed(title: "Register Failed", message: errorMessage)
-        }else{
+        if error {
+            presenter?.presentRegisterFailed(title: "Register Failed", message: errorMessage)
+        } else {
             worker = RegisterWorker()
-            worker?.doRegister(request: request, completion: {(data, err) in
-                if data != nil{
+            worker?.doRegister(request: request, completion: { data, _ in
+                if data != nil {
                     self.presenter?.presentRegisterSuccess()
-                }else{
+                } else {
                     self.presenter?.presentRegisterFailed(title: "Register Failed", message: "Please contact your administrator")
                 }
             })
