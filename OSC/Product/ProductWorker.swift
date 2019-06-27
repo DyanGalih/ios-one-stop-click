@@ -15,12 +15,13 @@ import UIKit
 
 class ProductWorker: BaseWorker {
     func doGetProductList(completion: @escaping (Product.List.Response?, Error?) -> Void) {
-        Alamofire.request(Config().endpoint + "/product", method: .get, headers: getHeader()).debugLog().responseJSON {
+        Alamofire.request(Config().endpoint + "/guest/product", method: .get, headers: getHeader()).debugLog().responseJSON {
             response in
             do {
                 let productStruct = try JSONDecoder().decode(Product.List.Response.self, from: response.data!)
                 completion(productStruct, nil)
             } catch let err {
+                print(err)
                 completion(nil, err)
             }
         }

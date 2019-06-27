@@ -26,7 +26,7 @@ class ProductPresenter: ProductPresentationLogic
 
     func presentProductList(response: Product.List.Response)
     {
-        let viewModel = Product.List.ViewModel(data: response.data.list)
+        let viewModel = Product.List.ViewModel(data: response.data)
         
         viewController?.displayProductList(viewModel: viewModel)
     }

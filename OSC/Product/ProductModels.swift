@@ -16,40 +16,32 @@ enum Product {
     // MARK: Use cases
 
     enum List {
-        struct TimeFormat: Decodable {
-            var Time: String
-            var Valid: Bool
-        }
-
         struct Request
         {}
+
         struct Item: Decodable {
             var id: String
-            var category_id: Int32
-            var subcategory_id: Int32
-            var category: String
-            var subcategory: String
             var name: String
-            var description: String
+            var price: Int32
+            var promoted_product: Bool
+            var promote_title: String
             var thumbnail: String
-            var file: String
-            var created_at: TimeFormat
-            var updated_at: TimeFormat
-        }
+            var preview: Preview
 
-        struct Data: Decodable {
-            var count: Int32
-            var list: [Item]
+            struct Preview: Decodable {
+                var String: String
+                var Valid: Bool
+            }
         }
-
+        
         struct Response: Decodable {
             var code: Int32
             var message: String
-            var data: Data
+            var data: [Item]
+            var length: Int32
         }
 
-        struct ViewModel
-        {
+        struct ViewModel {
             var data: [Item]
         }
     }

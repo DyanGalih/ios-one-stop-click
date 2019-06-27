@@ -10,6 +10,8 @@
 //  see http://clean-swift.com
 //
 
+import Alamofire
+import AlamofireImage
 import UIKit
 
 protocol ProductDisplayLogic: class
@@ -23,6 +25,8 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
     var interactor: ProductBusinessLogic?
     var router: (NSObjectProtocol & ProductRoutingLogic & ProductDataPassing)?
     var productList: [Product.List.Item] = []
+    var ImageCache = [String: UIImage]()
+    var defaultImage: UIImage?
     
     @IBOutlet var tableProductView: UITableView!
     
@@ -75,6 +79,13 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        defaultImage = UIImage(named: "noimage")
+        tableProductView.rowHeight = UITableView.automaticDimension
+        tableProductView.estimatedRowHeight = UITableView.automaticDimension
+    }
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
         doGetProductList()
     }
     
@@ -109,16 +120,53 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
         return productList.count
     }
     
+    func imageRatio(image: UIImage) -> UIImage
+    {
+        let size = CGSize(width: 100.0, height: 100.0)
+        return image.af_imageScaled(to: size)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let list = productList[indexPath.row]
-        var cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell")
-        if cell == nil
+        let item = productList[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell") as! ProductCellTableViewCell
+        
+        cell.setTitle(title: item.name)
+        cell.setPrice(price: item.price)
+        
+        let dishName = item.thumbnail
+        if let dishImage = ImageCache[dishName]
         {
-            cell = UITableViewCell(style: .value1, reuseIdentifier: "ProductTableViewCell")
+            cell.setImage(image: imageRatio(image: dishImage))
+        }
+        else
+        {
+            // Download image
+            // We should perform this in a background thread
+            Alamofire.request(Config().endpoint + item.thumbnail).validate(statusCode: 200..<300)
+                .responseImage
+            { response in
+                if let image = response.result.value
+                {
+                    // Store the commit date in to our cache
+                    self.ImageCache[dishName] = image
+                }
+                else
+                {
+                    self.ImageCache[dishName] = self.defaultImage
+                }
+                DispatchQueue.main.async
+                {
+                    cell.setImage(image: self.imageRatio(image: self.ImageCache[dishName]!))
+                }
+            }
         }
         
-        cell?.textLabel?.text = list.name
-        return cell!
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return UITableView.automaticDimension
     }
 }
