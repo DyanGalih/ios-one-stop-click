@@ -17,12 +17,13 @@ protocol LoginDisplayLogic: class {
     func showSuccessLogin()
 }
 
-class LoginViewController: UIViewController, LoginDisplayLogic{
+class LoginViewController: UIViewController, LoginDisplayLogic {
     var interactor: LoginBusinessLogic?
     var router: (NSObjectProtocol & LoginRoutingLogic & LoginDataPassing)?
 
     @IBOutlet var emailTxt: UITextField!
     @IBOutlet var pinTxt: UITextField!
+    @IBOutlet var loginButton: UIButtonActivity!
 
     // MARK: Object lifecycle
 
@@ -51,8 +52,6 @@ class LoginViewController: UIViewController, LoginDisplayLogic{
         router.dataStore = interactor
     }
 
-    // MARK: Routing
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let scene = segue.identifier {
             let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
@@ -61,17 +60,14 @@ class LoginViewController: UIViewController, LoginDisplayLogic{
             }
         }
     }
-
-    // MARK: View lifecycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    // MARK: Do something
-
+    
     func showSuccessLogin() {
-        showAlert(title: "Login Success", message: "Welcome Back", handler:routeToHome(_:))
+        loginButton.stopAnimating()
+        showAlert(title: "Login Success", message: "Welcome Back", handler: routeToHome(_:))
     }
 
     func routeToHome(_: UIAlertAction) {
@@ -79,10 +75,12 @@ class LoginViewController: UIViewController, LoginDisplayLogic{
     }
 
     func showLoginAlert(tilte: String, message: String) {
+        loginButton.stopAnimating()
         showAlert(title: title!, message: message, handler: nil)
     }
 
-    @IBAction func btnLogin(_ sender: UIButton) {
+    @IBAction func loginBtnAction(_ sender: UIButton) {
+        loginButton.startAnimating()
         let email: String = emailTxt.text!
         let pin: String = pinTxt.text!
 

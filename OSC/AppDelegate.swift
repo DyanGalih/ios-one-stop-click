@@ -9,12 +9,32 @@
 import CoreData
 import UIKit
 
+extension UIViewController {
+    func hideIndicator(indicator: UIActivityIndicatorView) {
+        indicator.isHidden = true
+    }
+
+    func startLoading(indicator: UIActivityIndicatorView) {
+        indicator.isHidden = false
+        indicator.startAnimating()
+    }
+
+    func stopLoading(indicator: UIActivityIndicatorView) {
+        indicator.isHidden = true
+        indicator.stopAnimating()
+    }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+//        let loginViewController = LoginViewController()
+//        loginViewController.view.backgroundColor = .green
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window!.makeKeyAndVisible()
+//        window!.rootViewController = loginViewController
         return true
     }
 

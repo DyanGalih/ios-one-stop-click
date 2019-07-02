@@ -18,16 +18,14 @@ protocol ForgotPasswordPresentationLogic {
 }
 
 class ForgotPasswordPresenter: ForgotPasswordPresentationLogic {
-    func presentFailedReqForgotPassword() {
-        viewController?.displayMessage(title: "Request Failed", message: "Request Reset Password Failed, please contact adminstrator")
-    }
-
     weak var viewController: ForgotPasswordDisplayLogic?
 
-    // MARK: Do something
+    func presentFailedReqForgotPassword() {
+        viewController?.displayFailedMessage(message: "Request Reset Password Failed, please contact adminstrator")
+    }
 
     func presentSucessForgotPassword() {
-        //let viewModel = ForgotPassword.Submit.ViewModel()
+        // let viewModel = ForgotPassword.Submit.ViewModel()
         viewController?.displayMessage(title: "Request Success", message: "Request Reset Password Success, Please Check Your Email")
     }
 }

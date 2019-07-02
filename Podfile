@@ -10,4 +10,5 @@ target 'OSC' do
   # 5
   pod 'Alamofire'
   pod 'AlamofireImage'
+  pod 'Texture'
 end

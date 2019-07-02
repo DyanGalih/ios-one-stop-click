@@ -14,15 +14,15 @@ import UIKit
 
 protocol ForgotPasswordDisplayLogic: class {
     func displayMessage(title: String, message: String)
+    func displayFailedMessage(message: String)
 }
 
 class ForgotPasswordViewController: UIViewController, ForgotPasswordDisplayLogic {
-    
-
     var interactor: ForgotPasswordBusinessLogic?
     var router: (NSObjectProtocol & ForgotPasswordRoutingLogic & ForgotPasswordDataPassing)?
 
     @IBOutlet var emailTxt: UITextField!
+    @IBOutlet var submitButton: UIButtonActivity!
 
     // MARK: Object lifecycle
 
@@ -53,7 +53,7 @@ class ForgotPasswordViewController: UIViewController, ForgotPasswordDisplayLogic
 
     // MARK: Routing
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
         if let scene = segue.identifier {
             let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
             if let router = router, router.responds(to: selector) {
@@ -62,26 +62,32 @@ class ForgotPasswordViewController: UIViewController, ForgotPasswordDisplayLogic
         }
     }
 
-    // MARK: View lifecycle
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    // MARK: Do something
-
-    // @IBOutlet weak var nameTextField: UITextField!
+    private func backToPrev(_: UIAlertAction) {
+        navigationController?.popToRootViewController(animated: true)
+    }
 
     func doReqForgotPassword(email: String) {
         let request = ForgotPassword.Submit.Request(email: email)
         interactor?.doForgotPassword(request: request)
     }
 
-    func displayMessage(title: String, message: String) {
-        self.showAlert(title: title, message: message, handler: nil)
+    func displayFailedMessage(message: String) {
+        submitButton.stopAnimating()
+        showAlert(title: "Forgot Password Failed", message: message, handler: nil)
     }
 
-    @IBAction func submitBtn(_ sender: UIButton) {
+    func displayMessage(title: String, message: String) {
+        emailTxt.text = ""
+        submitButton.stopAnimating()
+        showAlert(title: title, message: message, handler: backToPrev(_:))
+    }
+
+    @IBAction func submitButtonAction(_: UIButtonActivity) {
+        submitButton.startAnimating()
         let email: String = emailTxt.text!
         doReqForgotPassword(email: email)
     }

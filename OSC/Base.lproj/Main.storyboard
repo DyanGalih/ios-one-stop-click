@@ -32,12 +32,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdJ-2g-rgL">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdJ-2g-rgL" customClass="UIButtonActivity" customModule="OSC" customModuleProvider="target">
                                 <rect key="frame" x="141" y="216" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <action selector="btnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u4j-QS-Gxl"/>
+                                    <action selector="loginBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="var-hX-T39"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yun-gd-tY1">
@@ -63,6 +63,7 @@
                     <navigationItem key="navigationItem" id="SFC-q5-9Aw"/>
                     <connections>
                         <outlet property="emailTxt" destination="8pV-Sp-nTI" id="goV-03-a1f"/>
+                        <outlet property="loginButton" destination="rdJ-2g-rgL" id="2Rr-nC-hX5"/>
                         <outlet property="pinTxt" destination="fuU-7n-aVP" id="8XG-62-GJI"/>
                     </connections>
                 </viewController>
@@ -160,12 +161,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHe-RL-pmM">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHe-RL-pmM" customClass="UIButtonActivity" customModule="OSC" customModuleProvider="target">
                                 <rect key="frame" x="137" y="220" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
-                                    <action selector="submitBtn:" destination="uqc-WB-LTH" eventType="touchUpInside" id="icO-No-nIr"/>
+                                    <action selector="submitButtonAction:" destination="uqc-WB-LTH" eventType="touchUpInside" id="GWz-XA-yTx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -174,6 +175,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTxt" destination="W1z-BG-Lee" id="cPE-vN-jzK"/>
+                        <outlet property="submitButton" destination="ZHe-RL-pmM" id="bOt-e1-kge"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6bd-ql-uSI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -322,12 +324,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sR-xV-7Ml">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sR-xV-7Ml" customClass="UIButtonActivity" customModule="OSC" customModuleProvider="target">
                                 <rect key="frame" x="136" y="275" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
-                                    <action selector="btnSubmit:" destination="W0R-gY-p48" eventType="touchUpInside" id="hvV-pM-KOB"/>
+                                    <action selector="submitButtonAction:" destination="W0R-gY-p48" eventType="touchUpInside" id="5k6-uI-vt1"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Dyan" borderStyle="roundedRect" placeholder="Fist Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NtT-JP-Zhi">
@@ -347,6 +349,7 @@
                         <outlet property="lastNameTxt" destination="LXe-Jo-vTk" id="kzq-X0-8Mr"/>
                         <outlet property="pinConfirmationTxt" destination="yqe-kb-q9V" id="low-5A-HnL"/>
                         <outlet property="pinTxt" destination="yFd-RH-RYQ" id="vUQ-AW-Sxx"/>
+                        <outlet property="submitButton" destination="5sR-xV-7Ml" id="haf-Wb-13K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iUN-PY-FZo" userLabel="First Responder" sceneMemberID="firstResponder"/>

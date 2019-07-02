@@ -23,6 +23,7 @@ class RegisterViewController: UIViewController, RegisterDisplayLogic {
     @IBOutlet var emailTxt: UITextField!
     @IBOutlet var pinTxt: UITextField!
     @IBOutlet var pinConfirmationTxt: UITextField!
+    @IBOutlet var submitButton: UIButtonActivity!
 
     var interactor: RegisterBusinessLogic?
     var router: (NSObjectProtocol & RegisterRoutingLogic & RegisterDataPassing)?
@@ -75,7 +76,8 @@ class RegisterViewController: UIViewController, RegisterDisplayLogic {
 
     // @IBOutlet weak var nameTextField: UITextField!
 
-    @IBAction func btnSubmit(_ sender: UIButton) {
+    @IBAction func submitButtonAction(_ sender: UIButton) {
+        submitButton.startAnimating()
         let firstName = firstNameTxt.text!
         let lastName = lastNameTxt.text!
         let email = emailTxt.text!
@@ -87,10 +89,12 @@ class RegisterViewController: UIViewController, RegisterDisplayLogic {
     }
 
     func displayRegisterFailed(title: String, message: String) {
+        submitButton.stopAnimating()
         showAlert(title: title, message: message, handler: nil)
     }
 
     func displaySuccessRegister() {
+        submitButton.stopAnimating()
         firstNameTxt.text = ""
         lastNameTxt.text = ""
         emailTxt.text = ""
