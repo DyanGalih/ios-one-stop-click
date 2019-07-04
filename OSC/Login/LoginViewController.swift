@@ -76,7 +76,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
 
     func showLoginAlert(tilte: String, message: String) {
         loginButton.stopAnimating()
-        showAlert(title: title!, message: message, handler: nil)
+        showAlert(title: title ?? "Login Failed", message: message, handler: nil)
     }
 
     @IBAction func loginBtnAction(_ sender: UIButton) {

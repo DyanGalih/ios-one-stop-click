@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 class Util{
-    func showAlert(title: String, message: String, handler: ((UIAlertAction) -> Void)?) -> UIAlertController {
+    func showSimpleAlert(title: String, message: String, handler: ((UIAlertAction) -> Void)? = nil) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: handler)
@@ -30,9 +30,9 @@ extension Request {
 }
 
 extension UIViewController{
-    func showAlert(title: String, message: String, handler: ((UIAlertAction) -> Void)?){
+    func showAlert(title: String, message: String, handler: ((UIAlertAction) -> Void)? = nil){
         let util = Util()
-        let alert = util.showAlert(title: title, message: message, handler: handler)
+        let alert = util.showSimpleAlert(title: title, message: message, handler: handler)
         present(alert, animated: true, completion: nil)
     }
 }
