@@ -41,6 +41,12 @@
 		5EB96C55228129F600786655 /* RegisterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB96C4F228129F600786655 /* RegisterModels.swift */; };
 		5EB96C56228129F600786655 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB96C50228129F600786655 /* RegisterViewController.swift */; };
 		5EB96C57228129F600786655 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB96C51228129F600786655 /* RegisterInteractor.swift */; };
+		6318367522CF36A70027229D /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6318366F22CF36A70027229D /* ProfilePresenter.swift */; };
+		6318367622CF36A70027229D /* ProfileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6318367022CF36A70027229D /* ProfileWorker.swift */; };
+		6318367722CF36A70027229D /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6318367122CF36A70027229D /* ProfileRouter.swift */; };
+		6318367822CF36A70027229D /* ProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6318367222CF36A70027229D /* ProfileModels.swift */; };
+		6318367922CF36A70027229D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6318367322CF36A70027229D /* ProfileViewController.swift */; };
+		6318367A22CF36A70027229D /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6318367422CF36A70027229D /* ProfileInteractor.swift */; };
 		631C52E822C3260500854C8E /* ProductCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631C52E722C3260500854C8E /* ProductCellTableViewCell.swift */; };
 		632152EF22C5BC34002DCCA2 /* UIButtonActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632152EE22C5BC34002DCCA2 /* UIButtonActivity.swift */; };
 		632152F122C5C444002DCCA2 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 632152F022C5C444002DCCA2 /* background.jpg */; };
@@ -122,6 +128,12 @@
 		5EB96C4F228129F600786655 /* RegisterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModels.swift; sourceTree = "<group>"; };
 		5EB96C50228129F600786655 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5EB96C51228129F600786655 /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
+		6318366F22CF36A70027229D /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		6318367022CF36A70027229D /* ProfileWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWorker.swift; sourceTree = "<group>"; };
+		6318367122CF36A70027229D /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		6318367222CF36A70027229D /* ProfileModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModels.swift; sourceTree = "<group>"; };
+		6318367322CF36A70027229D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		6318367422CF36A70027229D /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		631C52E722C3260500854C8E /* ProductCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellTableViewCell.swift; sourceTree = "<group>"; };
 		632152EE22C5BC34002DCCA2 /* UIButtonActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonActivity.swift; sourceTree = "<group>"; };
 		632152F022C5C444002DCCA2 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
@@ -238,6 +250,7 @@
 		5EABF90022700065007FE532 /* OSC */ = {
 			isa = PBXGroup;
 			children = (
+				6318366E22CF34D20027229D /* Profile */,
 				632152ED22C5BC01002DCCA2 /* View */,
 				63421F3922C49E9E0001B95D /* Assets */,
 				6332D73622C2168E0077EEF7 /* Base */,
@@ -304,6 +317,19 @@
 				5EB96C51228129F600786655 /* RegisterInteractor.swift */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		6318366E22CF34D20027229D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				6318366F22CF36A70027229D /* ProfilePresenter.swift */,
+				6318367022CF36A70027229D /* ProfileWorker.swift */,
+				6318367122CF36A70027229D /* ProfileRouter.swift */,
+				6318367222CF36A70027229D /* ProfileModels.swift */,
+				6318367322CF36A70027229D /* ProfileViewController.swift */,
+				6318367422CF36A70027229D /* ProfileInteractor.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		632152ED22C5BC01002DCCA2 /* View */ = {
@@ -586,9 +612,11 @@
 				5E7CFAA022891295000A2C53 /* HomeInteractor.swift in Sources */,
 				5EB96C54228129F600786655 /* RegisterRouter.swift in Sources */,
 				5E7CFA9B22891295000A2C53 /* HomePresenter.swift in Sources */,
+				6318367A22CF36A70027229D /* ProfileInteractor.swift in Sources */,
 				5EB96C45228129DC00786655 /* LoginPresenter.swift in Sources */,
 				5EB96C55228129F600786655 /* RegisterModels.swift in Sources */,
 				6332D73522C1F65E0077EEF7 /* ProductInteractor.swift in Sources */,
+				6318367822CF36A70027229D /* ProfileModels.swift in Sources */,
 				5EB96C53228129F600786655 /* RegisterWorker.swift in Sources */,
 				5EB96C46228129DC00786655 /* LoginWorker.swift in Sources */,
 				5E7CFA9D22891295000A2C53 /* HomeRouter.swift in Sources */,
@@ -596,11 +624,14 @@
 				632CD3BE229BBDFD00E9D352 /* CategoryRouter.swift in Sources */,
 				5E7CFAAF2289260D000A2C53 /* TabViewController.swift in Sources */,
 				632CD3BC229BBDFD00E9D352 /* CategoryPresenter.swift in Sources */,
+				6318367722CF36A70027229D /* ProfileRouter.swift in Sources */,
 				632CD3BF229BBDFD00E9D352 /* CategoryModels.swift in Sources */,
 				6332D73022C1F65E0077EEF7 /* ProductPresenter.swift in Sources */,
+				6318367922CF36A70027229D /* ProfileViewController.swift in Sources */,
 				6332D73322C1F65E0077EEF7 /* ProductModels.swift in Sources */,
 				6332D73222C1F65E0077EEF7 /* ProductRouter.swift in Sources */,
 				5E7CFA9E22891295000A2C53 /* HomeModels.swift in Sources */,
+				6318367622CF36A70027229D /* ProfileWorker.swift in Sources */,
 				5E324207227A8B5900DDBA2F /* Config.swift in Sources */,
 				6332D73122C1F65E0077EEF7 /* ProductWorker.swift in Sources */,
 				5E7CFAB622893FB8000A2C53 /* osc.xcdatamodeld in Sources */,
@@ -622,6 +653,7 @@
 				632152EF22C5BC34002DCCA2 /* UIButtonActivity.swift in Sources */,
 				5EB96C57228129F600786655 /* RegisterInteractor.swift in Sources */,
 				6338FA7B22BC8E8800C1A29C /* ClientAuth.swift in Sources */,
+				6318367522CF36A70027229D /* ProfilePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

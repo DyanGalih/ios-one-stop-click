@@ -100,6 +100,10 @@ class RegisterViewController: UIViewController, RegisterDisplayLogic {
         emailTxt.text = ""
         pinTxt.text = ""
         pinConfirmationTxt.text = ""
-        showAlert(title: "Registration Success", message: "Registration Success Please Login using your account", handler: nil)
+        showAlert(title: "Registration Success", message: "Registration Success Please Login using your account", handler: routeToLogin(_:))
+    }
+    
+    func routeToLogin(_: UIAlertAction) {
+        router?.routeToLogin(segue: nil)
     }
 }
