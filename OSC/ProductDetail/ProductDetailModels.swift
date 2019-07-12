@@ -34,4 +34,19 @@ enum ProductDetail
             var thumbnail: String
         }
     }
+
+    enum Like
+    {
+        struct Request
+        {
+            var id: String
+        }
+
+        struct Response: Decodable
+        {
+            var code: Int32
+            var message: String
+            var data: String?
+        }
+    }
 }

@@ -10,11 +10,28 @@
 //  see http://clean-swift.com
 //
 
+import Alamofire
 import UIKit
 
-class ProductDetailWorker
-{
-  func doSomeWork()
-  {
-  }
+class ProductDetailWorker {
+    func doLike(request: ProductDetail.Like.Request, completion: @escaping (ProductDetail.Like.Response?, Error?) -> Void) {
+        let parameters = [
+            "id": request.id
+        ]
+
+        Alamofire.request(Config().endpoint + "/guest/product/like", method: .post, parameters: parameters, encoding: JSONEncoding.default).debugLog().responseJSON {
+            response in
+            do {
+                let likeStruct = try JSONDecoder().decode(ProductDetail.Like.Response.self, from: response.data!)
+                if likeStruct.code == 200 {
+                    completion(likeStruct, nil)
+                } else {
+                    completion(nil, nil)
+                }
+            } catch let err {
+                print(err)
+                completion(nil, err)
+            }
+        }
+    }
 }

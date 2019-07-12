@@ -79,17 +79,13 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        doGetProductList()
         defaultImage = UIImage(named: "noimage")
         tableProductView.rowHeight = UITableView.automaticDimension
         tableProductView.estimatedRowHeight = UITableView.automaticDimension
         tableProductView.delegate = self
         tableProductView.allowsSelection = true
         tableProductView.isUserInteractionEnabled = true
-    }
-    
-    override func viewWillAppear(_ animated: Bool)
-    {
-        doGetProductList()
     }
     
     // MARK: Do something

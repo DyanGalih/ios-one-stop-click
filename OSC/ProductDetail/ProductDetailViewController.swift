@@ -26,6 +26,7 @@ class ProductDetailViewController: UIViewController, ProductDetailDisplayLogic
     var ImageCache = [String: UIImage]()
     var defaultImage: UIImage?
     let util = Util()
+    var viewModel: ProductDetail.Item.ViewModel?
     
     @IBOutlet var titleTxt: UILabel!
     @IBOutlet var previewImg: UIImageView!
@@ -95,8 +96,9 @@ class ProductDetailViewController: UIViewController, ProductDetailDisplayLogic
     
     func displayProductDetail(viewModel: ProductDetail.Item.ViewModel)
     {
+        self.viewModel = viewModel
         titleTxt.text = viewModel.name
-        priceTxt.text = util.numberFormat(number: viewModel.price) 
+        priceTxt.text = util.numberFormat(number: viewModel.price)
         let dishName = viewModel.thumbnail
         if let dishImage = ImageCache[dishName]
         {
@@ -124,5 +126,11 @@ class ProductDetailViewController: UIViewController, ProductDetailDisplayLogic
                 }
             }
         }
+    }
+    
+    @IBAction func likeButton(_ sender: UIButton)
+    {
+        let request = ProductDetail.Like.Request(id: viewModel?.id ?? "1")
+        interactor?.doLikeProduct(request: request)
     }
 }

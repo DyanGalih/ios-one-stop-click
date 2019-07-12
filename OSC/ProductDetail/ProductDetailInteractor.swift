@@ -15,6 +15,7 @@ import UIKit
 protocol ProductDetailBusinessLogic
 {
     func doDisplayProductDetail()
+    func doLikeProduct(request: ProductDetail.Like.Request)
 }
 
 protocol ProductDetailDataStore
@@ -30,6 +31,22 @@ class ProductDetailInteractor: ProductDetailBusinessLogic, ProductDetailDataStor
     // var name: String = ""
 
     // MARK: Do something
+
+    func doLikeProduct(request: ProductDetail.Like.Request)
+    {
+        worker = ProductDetailWorker()
+        worker?.doLike(request: request, completion: {
+            data, _ in
+            if data != nil
+            {
+                print("success")
+            }
+            else
+            {
+                print("failed")
+            }
+        })
+    }
 
     func doDisplayProductDetail()
     {
