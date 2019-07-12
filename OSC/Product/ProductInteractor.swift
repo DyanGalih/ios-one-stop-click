@@ -19,14 +19,14 @@ protocol ProductBusinessLogic
 
 protocol ProductDataStore
 {
-    // var name: String { get set }
+    var productItem: [Product.List.Item]? { get set }
 }
 
 class ProductInteractor: ProductBusinessLogic, ProductDataStore
 {
+    var productItem: [Product.List.Item]?
     var presenter: ProductPresentationLogic?
     var worker: ProductWorker?
-    // var name: String = ""
 
     // MARK: Do something
 
@@ -36,6 +36,7 @@ class ProductInteractor: ProductBusinessLogic, ProductDataStore
         worker?.doGetProductList(completion: { (data, _) -> Void in
             if data != nil
             {
+                self.productItem = data?.data
                 let response: Product.List.Response = data!
                 self.presenter?.presentProductList(response: response)
             }

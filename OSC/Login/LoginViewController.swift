@@ -65,13 +65,19 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
         super.viewDidLoad()
     }
     
+    func cleanupForm(){
+        emailTxt.text = ""
+        pinTxt.text = ""
+    }
+    
     func showSuccessLogin() {
-        loginButton.stopAnimating()
         showAlert(title: "Login Success", message: "Welcome Back", handler: routeToHome(_:))
+        loginButton.stopAnimating()
     }
 
     func routeToHome(_: UIAlertAction) {
         router?.routeToHome(segue: nil)
+        cleanupForm()
     }
 
     func showLoginAlert(tilte: String, message: String) {

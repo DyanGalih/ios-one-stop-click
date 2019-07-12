@@ -82,6 +82,9 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
         defaultImage = UIImage(named: "noimage")
         tableProductView.rowHeight = UITableView.automaticDimension
         tableProductView.estimatedRowHeight = UITableView.automaticDimension
+        tableProductView.delegate = self
+        tableProductView.allowsSelection = true
+        tableProductView.isUserInteractionEnabled = true
     }
     
     override func viewWillAppear(_ animated: Bool)
@@ -118,12 +121,6 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return productList.count
-    }
-    
-    func imageRatio(image: UIImage) -> UIImage
-    {
-        let size = CGSize(width: 100.0, height: 100.0)
-        return image.af_imageScaled(to: size)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -168,5 +165,9 @@ class ProductViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.router?.routeToProductDetail(segue: nil)
     }
 }

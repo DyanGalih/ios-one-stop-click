@@ -19,7 +19,8 @@ class ProductCellTableViewCell: UITableViewCell {
     }
 
     func setPrice(price: Int32) {
-        self.priceViewTxt.text = String(price)
+        let util = Util()
+        self.priceViewTxt.text = util.numberFormat(number: price)
     }
 
     func setImage(image: UIImage) {
