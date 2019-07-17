@@ -14,7 +14,8 @@ import UIKit
 
 protocol ProductDetailPresentationLogic
 {
-    func presentProductDetail(response: Product.List.Item)
+    func presentProductDetail(response: ProductDetail.DetailItem.Data)
+    func presentSuccessLike(message: String)
 }
 
 class ProductDetailPresenter: ProductDetailPresentationLogic
@@ -23,9 +24,14 @@ class ProductDetailPresenter: ProductDetailPresentationLogic
 
     // MARK: Do something
 
-    func presentProductDetail(response: Product.List.Item)
+    func presentSuccessLike(message: String)
     {
-        let viewModel = ProductDetail.Item.ViewModel(id: response.id, name: response.name, price: response.price, promoted_product: response.promoted_product, promote_title: response.promote_title, thumbnail: response.thumbnail)
+        viewController?.showSuccessLike(message: message)
+    }
+
+    func presentProductDetail(response: ProductDetail.DetailItem.Data)
+    {
+        let viewModel = ProductDetail.DetailItem.ViewModel(id: response.id, name: response.name, description: response.description, thumbnail: response.thumbnail, file: response.file, price: response.price, preview_file_type: response.preview_file_type, download_remaining: response.download_remaining, view_count: response.view_count, like_count: response.like_count)
         viewController?.displayProductDetail(viewModel: viewModel)
     }
 }

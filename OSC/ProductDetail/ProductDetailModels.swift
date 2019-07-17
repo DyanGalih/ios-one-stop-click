@@ -15,6 +15,67 @@ import UIKit
 enum ProductDetail
 {
     // MARK: Use cases
+    enum DetailItem
+    {
+        struct TimeFormat: Decodable
+        {
+            var Time: String
+            var Valid: Bool
+        }
+
+        struct Request
+        {
+            var id: String
+        }
+
+        struct Response: Decodable
+        {
+            var code: Int32
+            var message: String
+            var data: Data
+        }
+
+        struct Data: Decodable
+        {
+            var id: String
+            var category_id: Int32
+            var subcategory_id: Int32
+            var category: String
+            var subcategory: String
+            var name: String
+            var description: String
+            var thumbnail: String
+            var file: String
+            var price: Int32
+            var preview_file_type: String
+            var download_remaining: Int32
+            var created_at: TimeFormat
+            var updated_at: TimeFormat
+            var view_count: Int32
+            var like_count: Int32
+            var user_email: String
+        }
+
+        struct Preview: Decodable
+        {
+            var String: String
+            var Valid: Bool
+        }
+
+        struct ViewModel
+        {
+            var id: String
+            var name: String
+            var description: String
+            var thumbnail: String
+            var file: String
+            var price: Int32
+            var preview_file_type: String
+            var download_remaining: Int32
+            var view_count: Int32
+            var like_count: Int32
+        }
+    }
 
     enum Item
     {

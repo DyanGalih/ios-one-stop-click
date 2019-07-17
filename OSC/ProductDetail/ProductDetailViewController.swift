@@ -16,7 +16,8 @@ import UIKit
 
 protocol ProductDetailDisplayLogic: class
 {
-    func displayProductDetail(viewModel: ProductDetail.Item.ViewModel)
+    func displayProductDetail(viewModel: ProductDetail.DetailItem.ViewModel)
+    func showSuccessLike(message: String)
 }
 
 class ProductDetailViewController: UIViewController, ProductDetailDisplayLogic
@@ -26,11 +27,13 @@ class ProductDetailViewController: UIViewController, ProductDetailDisplayLogic
     var ImageCache = [String: UIImage]()
     var defaultImage: UIImage?
     let util = Util()
-    var viewModel: ProductDetail.Item.ViewModel?
+    var viewModel: ProductDetail.DetailItem.ViewModel?
     
     @IBOutlet var titleTxt: UILabel!
     @IBOutlet var previewImg: UIImageView!
     @IBOutlet var priceTxt: UILabel!
+    @IBOutlet var viewTxt: UILabel!
+    @IBOutlet var likeTxt: UILabel!
     
     // MARK: Object lifecycle
     
@@ -91,14 +94,17 @@ class ProductDetailViewController: UIViewController, ProductDetailDisplayLogic
     
     func doDisplayProductDetail()
     {
-        interactor?.doDisplayProductDetail()
+        interactor?.doGetProductDetail()
     }
     
-    func displayProductDetail(viewModel: ProductDetail.Item.ViewModel)
+    func displayProductDetail(viewModel: ProductDetail.DetailItem.ViewModel)
     {
         self.viewModel = viewModel
         titleTxt.text = viewModel.name
         priceTxt.text = util.numberFormat(number: viewModel.price)
+        viewTxt.text = util.numberFormat(number: viewModel.view_count)
+        likeTxt.text = util.numberFormat(number: viewModel.like_count)
+        
         let dishName = viewModel.thumbnail
         if let dishImage = ImageCache[dishName]
         {
@@ -126,6 +132,16 @@ class ProductDetailViewController: UIViewController, ProductDetailDisplayLogic
                 }
             }
         }
+    }
+    
+    func refreshDataDetail(_: UIAlertAction){
+        let like_count: Int32 = Int32(likeTxt.text!)!
+        likeTxt.text = String(like_count+1)
+    }
+    
+    func showSuccessLike(message: String)
+    {
+        showAlert(title: "Success Like", message: message,handler: refreshDataDetail(_:))
     }
     
     @IBAction func likeButton(_ sender: UIButton)

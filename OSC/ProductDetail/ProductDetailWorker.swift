@@ -13,13 +13,29 @@
 import Alamofire
 import UIKit
 
-class ProductDetailWorker {
+class ProductDetailWorker: BaseWorker {
+    func doGetDetail(request: ProductDetail.DetailItem.Request, completion: @escaping (ProductDetail.DetailItem.Response?, Error?) -> Void) {
+        Alamofire.request(Config().endpoint + "/guest/product/detail?id=" + request.id, method: .get, headers: getHeader()).debugLog().responseJSON {
+            response in
+            do {
+                let detailProduct = try JSONDecoder().decode(ProductDetail.DetailItem.Response.self, from: response.data!)
+                if detailProduct.code == 200 {
+                    completion(detailProduct, nil)
+                } else {
+                    completion(nil, nil)
+                }
+            } catch let err {
+                completion(nil, err)
+            }
+        }
+    }
+
     func doLike(request: ProductDetail.Like.Request, completion: @escaping (ProductDetail.Like.Response?, Error?) -> Void) {
         let parameters = [
             "id": request.id
         ]
 
-        Alamofire.request(Config().endpoint + "/guest/product/like", method: .post, parameters: parameters, encoding: JSONEncoding.default).debugLog().responseJSON {
+        Alamofire.request(Config().endpoint + "/guest/product/like?id=" + request.id, method: .post, parameters: parameters, encoding: JSONEncoding.default).debugLog().responseJSON {
             response in
             do {
                 let likeStruct = try JSONDecoder().decode(ProductDetail.Like.Response.self, from: response.data!)
@@ -29,7 +45,6 @@ class ProductDetailWorker {
                     completion(nil, nil)
                 }
             } catch let err {
-                print(err)
                 completion(nil, err)
             }
         }

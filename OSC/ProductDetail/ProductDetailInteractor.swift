@@ -14,8 +14,8 @@ import UIKit
 
 protocol ProductDetailBusinessLogic
 {
-    func doDisplayProductDetail()
     func doLikeProduct(request: ProductDetail.Like.Request)
+    func doGetProductDetail()
 }
 
 protocol ProductDetailDataStore
@@ -39,7 +39,7 @@ class ProductDetailInteractor: ProductDetailBusinessLogic, ProductDetailDataStor
             data, _ in
             if data != nil
             {
-                print("success")
+                self.presenter?.presentSuccessLike(message: data?.message ?? "You Liked This Product")
             }
             else
             {
@@ -48,8 +48,26 @@ class ProductDetailInteractor: ProductDetailBusinessLogic, ProductDetailDataStor
         })
     }
 
-    func doDisplayProductDetail()
+    func doDisplayProductDetail(response: ProductDetail.DetailItem.Data)
     {
-        presenter?.presentProductDetail(response: productItem!)
+        presenter?.presentProductDetail(response: response)
+    }
+
+    func doGetProductDetail()
+    {
+        worker = ProductDetailWorker()
+        let request = ProductDetail.DetailItem.Request(id: productItem!.id)
+        worker?.doGetDetail(request: request, completion: {
+            data, _ in
+            if data != nil
+            {
+                self.doDisplayProductDetail(response: data!.data)
+            }
+            else
+            {
+                print("empty")
+            }
+        })
+        print(productItem!)
     }
 }
