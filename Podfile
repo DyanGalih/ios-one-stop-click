@@ -10,5 +10,6 @@ target 'OSC' do
   # 5
   pod 'Alamofire'
   pod 'AlamofireImage'
+  pod 'GoogleSignIn'
   pod 'Texture'
 end

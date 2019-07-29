@@ -23,6 +23,11 @@ class HomeViewController: UITableViewController, HomeDisplayLogic {
     var homeList: [Home.List.Data] = []
 
     // MARK: Object lifecycle
+    
+    override init(style: UITableView.Style) {
+        super.init(style: style)
+        setup()
+    }
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)

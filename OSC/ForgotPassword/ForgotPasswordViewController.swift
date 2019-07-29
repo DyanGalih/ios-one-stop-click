@@ -20,12 +20,13 @@ protocol ForgotPasswordDisplayLogic: class {
 class ForgotPasswordViewController: UIViewController, ForgotPasswordDisplayLogic {
     var interactor: ForgotPasswordBusinessLogic?
     var router: (NSObjectProtocol & ForgotPasswordRoutingLogic & ForgotPasswordDataPassing)?
+    var forgotPasswordView: ForgotPasswordView?
 
     @IBOutlet var emailTxt: UITextField!
     @IBOutlet var submitButton: UIButtonActivity!
 
     // MARK: Object lifecycle
-
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
@@ -43,6 +44,7 @@ class ForgotPasswordViewController: UIViewController, ForgotPasswordDisplayLogic
         let interactor = ForgotPasswordInteractor()
         let presenter = ForgotPasswordPresenter()
         let router = ForgotPasswordRouter()
+        forgotPasswordView = ForgotPasswordView()
         viewController.interactor = interactor
         viewController.router = router
         interactor.presenter = presenter

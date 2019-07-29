@@ -20,21 +20,39 @@ protocol LoginDisplayLogic: class {
 class LoginViewController: UIViewController, LoginDisplayLogic {
     var interactor: LoginBusinessLogic?
     var router: (NSObjectProtocol & LoginRoutingLogic & LoginDataPassing)?
+    var loginView: LoginView!
 
     @IBOutlet var emailTxt: UITextField!
     @IBOutlet var pinTxt: UITextField!
     @IBOutlet var loginButton: UIButtonActivity!
-
+    
     // MARK: Object lifecycle
-
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
+    {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
     }
-
-    required init?(coder aDecoder: NSCoder) {
+    
+    required init?(coder aDecoder: NSCoder)
+    {
         super.init(coder: aDecoder)
         setup()
+    }
+    
+    func setupView(){
+        view.backgroundColor = UIColor(r: 61, g: 91, b: 151)
+        self.loginView = LoginView(frame: self.view.frame)
+        self.loginView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(loginView)
+        setupLoginView()
+    }
+    
+    func setupLoginView(){
+        loginView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        loginView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        loginView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
+        loginView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
     }
 
     // MARK: Setup
@@ -63,26 +81,39 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
     }
     
     func cleanupForm(){
-        emailTxt.text = ""
-        pinTxt.text = ""
+        loginView.emailTextField.text = ""
+        loginView.passwordTextField.text = ""
     }
     
     func showSuccessLogin() {
         showAlert(title: "Login Success", message: "Welcome Back", handler: routeToHome(_:))
-        loginButton.stopAnimating()
+        //loginButton.stopAnimating()
+        loginView.loginButton.stopAnimating()
     }
 
     func routeToHome(_: UIAlertAction) {
+        print("login success")
         router?.routeToHome(segue: nil)
         cleanupForm()
     }
 
     func showLoginAlert(tilte: String, message: String) {
-        loginButton.stopAnimating()
+        //loginButton.stopAnimating()
+        loginView.loginButton.stopAnimating()
         showAlert(title: title ?? "Login Failed", message: message, handler: nil)
+    }
+    
+    @objc func loginButtonAction(sender: UIButton){
+        loginView.loginButton.startAnimating()
+        let email: String = loginView.emailTextField.text!
+        let pin: String = loginView.passwordTextField.text!
+
+        let request = Login.User.Request(email: email, password: pin)
+        interactor?.doLogin(request: request)
     }
 
     @IBAction func loginBtnAction(_ sender: UIButton) {

@@ -24,14 +24,16 @@ protocol LoginDataPassing {
 
 class LoginRouter: NSObject, LoginRoutingLogic, LoginDataPassing {
     func routeToForgotPassword(segue: UIStoryboardSegue?) {
-        if let segue = segue {
-            _ = segue.destination as! ForgotPasswordViewController
-        } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let destinationVC = storyboard.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as! ForgotPasswordViewController
-
-            navigateToForgotPassword(source: viewController!, destination: destinationVC)
-        }
+//        if let segue = segue {
+//            _ = segue.destination as! ForgotPasswordViewController
+//        } else {
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let destinationVC = storyboard.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as! ForgotPasswordViewController
+//
+//            navigateToForgotPassword(source: viewController!, destination: destinationVC)
+//        }
+    
+        self.viewController?.present(ForgotPasswordViewController(), animated: true)
     }
 
     func routeToRegister(segue: UIStoryboardSegue?) {
@@ -49,13 +51,15 @@ class LoginRouter: NSObject, LoginRoutingLogic, LoginDataPassing {
     }
 
     func routeToHome(segue: UIStoryboardSegue?) {
-        if let segue = segue {
-            _ = segue.destination as! HomeViewController
-        } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let destinationVC = storyboard.instantiateViewController(withIdentifier: "HomeTabBarController") as! UITabBarController
-            navigateToHome(source: viewController!, destination: destinationVC)
-        }
+//        if let segue = segue {
+//            _ = segue.destination as! HomeViewController
+//        } else {
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let destinationVC = storyboard.instantiateViewController(withIdentifier: "HomeTabBarController") as! UITabBarController
+//            navigateToHome(source: viewController!, destination: destinationVC)
+//        }
+
+        self.viewController!.present(HomeViewController(), animated: true)
     }
 
     weak var viewController: LoginViewController?
