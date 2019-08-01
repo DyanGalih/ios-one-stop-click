@@ -27,13 +27,15 @@ class RegisterRouter: NSObject, RegisterRoutingLogic, RegisterDataPassing {
     // MARK: Routing
 
     func routeToLogin(segue: UIStoryboardSegue?) {
-        if let segue = segue {
-            _ = segue.destination as! LoginViewController
-        } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let destinationVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-            navigateToLogin(source: viewController!, destination: destinationVC)
-        }
+//        if let segue = segue {
+//            _ = segue.destination as! LoginViewController
+//        } else {
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let destinationVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+//            navigateToLogin(source: viewController!, destination: destinationVC)
+//        }
+        
+        viewController?.present(LoginViewController(), animated: true, completion: nil)
     }
 
     // MARK: Navigation

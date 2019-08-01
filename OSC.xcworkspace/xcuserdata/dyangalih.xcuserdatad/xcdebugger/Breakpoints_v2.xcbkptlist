@@ -184,13 +184,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OSC/Login/LoginViewController.swift"
-            timestampString = "585823023.258729"
+            timestampString = "586323027.847001"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "showLoginAlert(tilte:message:)"
-            landmarkType = "7">
+            startingLineNumber = "118"
+            endingLineNumber = "118">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -200,13 +198,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OSC/Login/LoginViewController.swift"
-            timestampString = "585823023.258866"
+            timestampString = "586323027.847463"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "showLoginAlert(tilte:message:)"
-            landmarkType = "7">
+            startingLineNumber = "118"
+            endingLineNumber = "118">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -232,7 +228,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OSC/Login/LoginView.swift"
-            timestampString = "585823023.259028"
+            timestampString = "586323027.847756"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "166"
@@ -246,13 +242,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OSC/Login/LoginViewController.swift"
-            timestampString = "585823023.25969"
+            timestampString = "586323027.847823"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "setupView()"
-            landmarkType = "7">
+            startingLineNumber = "118"
+            endingLineNumber = "118">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -18,15 +18,10 @@ protocol RegisterDisplayLogic: class {
 }
 
 class RegisterViewController: UIViewController, RegisterDisplayLogic {
-    @IBOutlet var firstNameTxt: UITextField!
-    @IBOutlet var lastNameTxt: UITextField!
-    @IBOutlet var emailTxt: UITextField!
-    @IBOutlet var pinTxt: UITextField!
-    @IBOutlet var pinConfirmationTxt: UITextField!
-    @IBOutlet var submitButton: UIButtonActivity!
 
     var interactor: RegisterBusinessLogic?
     var router: (NSObjectProtocol & RegisterRoutingLogic & RegisterDataPassing)?
+    var registerView: RegisterView!
 
     // MARK: Object lifecycle
 
@@ -55,54 +50,56 @@ class RegisterViewController: UIViewController, RegisterDisplayLogic {
         router.dataStore = interactor
     }
 
-    // MARK: Routing
+    func setupView() {
+        registerView = RegisterView(frame: view.frame)
+        registerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(registerView)
+        setupRegisterView()
+    }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
-        }
+    func setupRegisterView() {
+        registerView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        registerView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        registerView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        registerView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
     }
 
     // MARK: View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
     }
 
     // MARK: Do something
-
-    // @IBOutlet weak var nameTextField: UITextField!
-
-    @IBAction func submitButtonAction(_ sender: UIButton) {
-        submitButton.startAnimating()
-        let firstName = firstNameTxt.text!
-        let lastName = lastNameTxt.text!
-        let email = emailTxt.text!
-        let pin = pinTxt.text!
-        let pinConfirmation = pinConfirmationTxt.text!
-
-        let request = Register.NewUser.Request(firstname: firstName, lastname: lastName, email: email, password: pin, password_confirmation: pinConfirmation)
+    
+    @objc func submitRegiserButton(_:UIButton){
+        registerView.registerButton.startAnimating()
+        let firstName = registerView.firstNameTextField.text!
+        let lastName = registerView.lastNameTextField.text!
+        let email = registerView.emailTextField.text!
+        let password = registerView.passwordTextField.text!
+        let reInputPassword = registerView.reinputPasswordTextField.text!
+        
+        let request = Register.NewUser.Request(firstname: firstName, lastname: lastName, email: email, password: password, password_confirmation: reInputPassword)
         interactor?.doRegister(request: request)
     }
 
     func displayRegisterFailed(title: String, message: String) {
-        submitButton.stopAnimating()
+        registerView.registerButton.stopAnimating()
         showAlert(title: title, message: message, handler: nil)
     }
 
     func displaySuccessRegister() {
-        submitButton.stopAnimating()
-        firstNameTxt.text = ""
-        lastNameTxt.text = ""
-        emailTxt.text = ""
-        pinTxt.text = ""
-        pinConfirmationTxt.text = ""
+        registerView.registerButton.stopAnimating()
+        registerView.firstNameTextField.text = ""
+        registerView.lastNameTextField.text = ""
+        registerView.emailTextField.text = ""
+        registerView.passwordTextField.text = ""
+        registerView.reinputPasswordTextField.text = ""
         showAlert(title: "Registration Success", message: "Registration Success Please Login using your account", handler: routeToLogin(_:))
     }
-    
+
     func routeToLogin(_: UIAlertAction) {
         router?.routeToLogin(segue: nil)
     }

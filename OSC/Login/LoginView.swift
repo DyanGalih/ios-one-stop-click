@@ -46,7 +46,7 @@ class LoginView: UIView {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.layer.cornerRadius = 5
         button.layer.masksToBounds = true
-//        button.addTarget(self, action: #selector(LoginViewController.loginButtonAction(sender:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(LoginViewController.registerButtonAction(sender:)), for: .touchUpInside)
         return button
     }()
     
@@ -59,13 +59,13 @@ class LoginView: UIView {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.layer.cornerRadius = 5
         button.layer.masksToBounds = true
-//        button.addTarget(self, action: #selector(LoginViewController.loginButtonAction(sender:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(LoginViewController.forgotPasswordButtonAction(sender:)), for: .touchUpInside)
         return button
     }()
     
     let emailTextField: UITextField = {
         let field = UITextField()
-        field.placeholder = "UserName/Email"
+        field.placeholder = "Email"
         field.translatesAutoresizingMaskIntoConstraints = false
         field.keyboardType = UIKeyboardType.emailAddress
         return field
@@ -110,14 +110,14 @@ class LoginView: UIView {
         setupPasswordTextField()
     }
     
-    func setupForgotPassword(){
+    func setupForgotPassword() {
         forgotPasswordButton.topAnchor.constraint(equalTo: registerButton.bottomAnchor, constant: 12).isActive = true
         forgotPasswordButton.leftAnchor.constraint(equalTo: registerButton.leftAnchor).isActive = true
         forgotPasswordButton.widthAnchor.constraint(equalTo: registerButton.widthAnchor).isActive = true
         forgotPasswordButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
-    func setupRegisterButton(){
+    func setupRegisterButton() {
         registerButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 12).isActive = true
         registerButton.leftAnchor.constraint(equalTo: loginButton.leftAnchor).isActive = true
         registerButton.widthAnchor.constraint(equalTo: loginButton.widthAnchor).isActive = true

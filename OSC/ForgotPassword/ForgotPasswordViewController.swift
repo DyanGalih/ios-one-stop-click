@@ -20,10 +20,7 @@ protocol ForgotPasswordDisplayLogic: class {
 class ForgotPasswordViewController: UIViewController, ForgotPasswordDisplayLogic {
     var interactor: ForgotPasswordBusinessLogic?
     var router: (NSObjectProtocol & ForgotPasswordRoutingLogic & ForgotPasswordDataPassing)?
-    var forgotPasswordView: ForgotPasswordView?
-
-    @IBOutlet var emailTxt: UITextField!
-    @IBOutlet var submitButton: UIButtonActivity!
+    var forgotPasswordView: ForgotPasswordView!
 
     // MARK: Object lifecycle
     
@@ -44,13 +41,26 @@ class ForgotPasswordViewController: UIViewController, ForgotPasswordDisplayLogic
         let interactor = ForgotPasswordInteractor()
         let presenter = ForgotPasswordPresenter()
         let router = ForgotPasswordRouter()
-        forgotPasswordView = ForgotPasswordView()
         viewController.interactor = interactor
         viewController.router = router
         interactor.presenter = presenter
         presenter.viewController = viewController
         router.viewController = viewController
         router.dataStore = interactor
+    }
+
+    private func setupView(){
+        self.forgotPasswordView = ForgotPasswordView(frame: self.view.frame)
+        self.forgotPasswordView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(self.forgotPasswordView)
+        setupForgotPasswordView()
+    }
+
+    private func setupForgotPasswordView(){
+        self.forgotPasswordView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        self.forgotPasswordView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        self.forgotPasswordView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
+        self.forgotPasswordView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
     }
 
     // MARK: Routing
@@ -66,6 +76,7 @@ class ForgotPasswordViewController: UIViewController, ForgotPasswordDisplayLogic
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
     }
 
     private func backToPrev(_: UIAlertAction) {
@@ -78,19 +89,19 @@ class ForgotPasswordViewController: UIViewController, ForgotPasswordDisplayLogic
     }
 
     func displayFailedMessage(message: String) {
-        submitButton.stopAnimating()
+        forgotPasswordView.submitButton.stopAnimating()
         showAlert(title: "Forgot Password Failed", message: message, handler: nil)
     }
 
     func displayMessage(title: String, message: String) {
-        emailTxt.text = ""
-        submitButton.stopAnimating()
+        forgotPasswordView.emailTextView.text = ""
+        forgotPasswordView.submitButton.stopAnimating()
         showAlert(title: title, message: message, handler: backToPrev(_:))
     }
 
-    @IBAction func submitButtonAction(_: UIButtonActivity) {
-        submitButton.startAnimating()
-        let email: String = emailTxt.text!
+    @objc func submitButton(_: UIButtonActivity){
+        forgotPasswordView.submitButton.stopAnimating()
+        let email: String = forgotPasswordView.emailTextView.text!
         doReqForgotPassword(email: email)
     }
 }

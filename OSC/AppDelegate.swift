@@ -29,12 +29,22 @@ extension UIViewController {
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
+    func loginPage() -> LoginViewController {
+        return LoginViewController()
+    }
+
+    func registerPage() -> RegisterViewController {
+        return RegisterViewController()
+    }
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let loginViewController = LoginViewController()
+        let loginViewController = loginPage()
+        let navigationController = UINavigationController(rootViewController: loginViewController)
+
         loginViewController.view.backgroundColor = .green
         window = UIWindow(frame: UIScreen.main.bounds)
-        window!.makeKeyAndVisible()
-        window!.rootViewController = loginViewController
+        window?.makeKeyAndVisible()
+        window?.rootViewController = navigationController
         return true
     }
 

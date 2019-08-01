@@ -32,22 +32,24 @@ class LoginRouter: NSObject, LoginRoutingLogic, LoginDataPassing {
 //
 //            navigateToForgotPassword(source: viewController!, destination: destinationVC)
 //        }
-    
-        self.viewController?.present(ForgotPasswordViewController(), animated: true)
+
+        self.viewController?.navigationController?.pushViewController(ForgotPasswordViewController(), animated: true)
     }
 
     func routeToRegister(segue: UIStoryboardSegue?) {
-        if let segue = segue {
-            let destinationVC = segue.destination as! RegisterViewController
-            _ = destinationVC.router!.dataStore!
-        } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let destinationVC = storyboard.instantiateViewController(withIdentifier: "RegistrationViewController") as! RegisterViewController
+//        if let segue = segue {
+//            let destinationVC = segue.destination as! RegisterViewController
+//            _ = destinationVC.router!.dataStore!
+//        } else {
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let destinationVC = storyboard.instantiateViewController(withIdentifier: "RegistrationViewController") as! RegisterViewController
+//
+//            var destinationDS = destinationVC.router!.dataStore!
+//            passDataToRegister(source: dataStore!, destination: &destinationDS)
+//            navigateToRegister(source: viewController!, destination: destinationVC)
+//        }
 
-            var destinationDS = destinationVC.router!.dataStore!
-            passDataToRegister(source: dataStore!, destination: &destinationDS)
-            navigateToRegister(source: viewController!, destination: destinationVC)
-        }
+        self.viewController?.navigationController?.pushViewController(RegisterViewController(), animated: true)
     }
 
     func routeToHome(segue: UIStoryboardSegue?) {
